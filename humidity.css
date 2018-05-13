@@ -1,10 +1,9 @@
 select option {
     margin: 40px;
-    background: #5BC0DE;
+    background:gray;
     color: #fff ;
 
 }
 .container-fluid {
-    background-color: lightgrey
+    background-color: rgba(112, 198, 224, 0.699)
 }
-

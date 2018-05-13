@@ -1,0 +1,5067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name = "description" content>
+    <meta name="author" content>
+    <title> Dataset</title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous" rel = "stylesheet">
+    <!-- Custom styles -->
+    <link href = "humidity.css" rel = "stylesheet">
+</head>
+<body>
+    <div class = "d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+        <h1 class = "my-0 mr-md-auto pd-0 font-weight-bold text-info">
+            <a href = "https://separks09.github.io/Web_Visualization_Dashboard_Lattitude/index.htmlLatitude" style = "color:#5BC0DE">Latitude</a>
+        </h1>
+        <nav class = "my-2 my-md-0 mr-md-3">
+            <a class = "p-2 text-dark">
+                <select name="menu" onChange="top.location.href=this.options[this.selectedIndex].value;" value="GO">
+                    <option selected="selected" value = "https://separks09.github.io/Web_Visualization_Dashboard_Lattitude/index.html">
+                        Home
+                    </option>
+                    <option value="https://separks09.github.io/Web_Visualization_Dashboard_Lattitude/temperature.html">Temperature</option>
+                    <option value="https://separks09.github.io/Web_Visualization_Dashboard_Lattitude/windspeed.html">Wind Speed</option>
+                    <option value="https://separks09.github.io/Web_Visualization_Dashboard_Lattitude/cloudiness.html">Cloudiness</option>
+                    <option value="https://separks09.github.io/Web_Visualization_Dashboard_Lattitude/humidity.html">Humidity</option>
+                </select>
+            </a>
+            <a class = "p-2 text-dark" 
+            href="https://separks09.github.io/Web_Visualization_Dashboard_Lattitude/comparison.html">Comparison</a>
+            <a class = "p-2 text-dark" 
+            href="https://separks09.github.io/Web_Visualization_Dashboard_Lattitude/data.html">Data</a>
+        </nav>
+    </div>
+    <div class = "container-fluid p-3">
+        <div class="container bg-white m-5 p-5">
+            <h3> Dataset</h3>
+            <br></br>
+            <hr></hr>
+            <p>The purpose of this project was to analyze how weather changes as you get closer to the 
+            equator.  To accomplish this analysis, we first use CitiPy to randomly generate a list of over 500 unique cities.
+            We then called on the OpenWeatherMap API to assemble a dataset from the current readings in each city.  After 
+            assembling the dataset, we user Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked 
+            at included: temperature, cloudiness, wind speed and humidity. </p>
+            <hr></hr>
+            <br></br>
+        <div class = "table-striped" style="overflow-y: auto">
+            <table class="table table-bordered table-hover table-condensed">
+                <thead><tr><th title="Field #1">City ID</th>
+                <th title="Field #2">City Name</th>
+                <th title="Field #3">Cloudiness</th>
+                <th title="Field #4">Country</th>
+                <th title="Field #5">Humidity</th>
+                <th title="Field #6">Latitude</th>
+                <th title="Field #7">Temperature</th>
+                <th title="Field #8">Wind Speeds</th>
+                </tr></thead>
+                <tbody><tr>
+                <td align="right">3081752</td>
+                <td>Wladyslawowo</td>
+                <td>88.00%</td>
+                <td>Pl</td>
+                <td>100.00%</td>
+                <td align="right">54.7909</td>
+                <td align="right">30.87</td>
+                <td align="right">15.73</td>
+                </tr>
+                <tr>
+                <td align="right">1528998</td>
+                <td>Yumen</td>
+                <td>8.00%</td>
+                <td>Cn</td>
+                <td>38.00%</td>
+                <td align="right">40.2917</td>
+                <td align="right">36.09</td>
+                <td align="right">13.49</td>
+                </tr>
+                <tr>
+                <td align="right">1799869</td>
+                <td>Nanning</td>
+                <td>24.00%</td>
+                <td>Cn</td>
+                <td>92.00%</td>
+                <td align="right">22.8326</td>
+                <td align="right">64.33</td>
+                <td align="right">4.43</td>
+                </tr>
+                <tr>
+                <td align="right">3661980</td>
+                <td>Tamandare</td>
+                <td>80.00%</td>
+                <td>Br</td>
+                <td>79.00%</td>
+                <td align="right">-8.2789</td>
+                <td align="right">75.13</td>
+                <td align="right">5.66</td>
+                </tr>
+                <tr>
+                <td align="right">3468720</td>
+                <td>Buritizeiro</td>
+                <td>12.00%</td>
+                <td>Br</td>
+                <td>66.00%</td>
+                <td align="right">-17.3668</td>
+                <td align="right">68.99</td>
+                <td align="right">11.14</td>
+                </tr>
+                <tr>
+                <td align="right">3354077</td>
+                <td>Opuwo</td>
+                <td>36.00%</td>
+                <td>Na</td>
+                <td>97.00%</td>
+                <td align="right">-18.0559</td>
+                <td align="right">60.49</td>
+                <td align="right">1.86</td>
+                </tr>
+                <tr>
+                <td align="right">58933</td>
+                <td>Garowe</td>
+                <td>0.00%</td>
+                <td>So</td>
+                <td>80.00%</td>
+                <td align="right">8.4061</td>
+                <td align="right">65.14</td>
+                <td align="right">7.23</td>
+                </tr>
+                <tr>
+                <td align="right">3448903</td>
+                <td>Sao Joao Da Barra</td>
+                <td>0.00%</td>
+                <td>Br</td>
+                <td>96.00%</td>
+                <td align="right">-21.6403</td>
+                <td align="right">77.86</td>
+                <td align="right">15.28</td>
+                </tr>
+                <tr>
+                <td align="right">625539</td>
+                <td>Malaryta</td>
+                <td>68.00%</td>
+                <td>By</td>
+                <td>87.00%</td>
+                <td align="right">51.7917</td>
+                <td align="right">24.66</td>
+                <td align="right">3.76</td>
+                </tr>
+                <tr>
+                <td align="right">4011743</td>
+                <td>Constitucion</td>
+                <td>0.00%</td>
+                <td>Mx</td>
+                <td>16.00%</td>
+                <td align="right">23.9912</td>
+                <td align="right">77.41</td>
+                <td align="right">15.73</td>
+                </tr>
+                <tr>
+                <td align="right">2729907</td>
+                <td>Longyearbyen</td>
+                <td>0.00%</td>
+                <td>No</td>
+                <td>74.00%</td>
+                <td align="right">78.2198</td>
+                <td align="right">7.86</td>
+                <td align="right">1.97</td>
+                </tr>
+                <tr>
+                <td align="right">5961417</td>
+                <td>Husavik</td>
+                <td>64.00%</td>
+                <td>Ca</td>
+                <td>97.00%</td>
+                <td align="right">50.5623</td>
+                <td align="right">31.33</td>
+                <td align="right">5.44</td>
+                </tr>
+                <tr>
+                <td align="right">2142316</td>
+                <td>Yeppoon</td>
+                <td>48.00%</td>
+                <td>Au</td>
+                <td>79.00%</td>
+                <td align="right">-23.1349</td>
+                <td align="right">84.2</td>
+                <td align="right">11.03</td>
+                </tr>
+                <tr>
+                <td align="right">2015306</td>
+                <td>Tiksi</td>
+                <td>64.00%</td>
+                <td>Ru</td>
+                <td>75.00%</td>
+                <td align="right">71.6366</td>
+                <td align="right">9.88</td>
+                <td align="right">7.45</td>
+                </tr>
+                <tr>
+                <td align="right">3412093</td>
+                <td>Vestmannaeyjar</td>
+                <td>92.00%</td>
+                <td>Is</td>
+                <td>95.00%</td>
+                <td align="right">63.4427</td>
+                <td align="right">41.79</td>
+                <td align="right">34.85</td>
+                </tr>
+                <tr>
+                <td align="right">1264037</td>
+                <td>Malpe</td>
+                <td>0.00%</td>
+                <td>In</td>
+                <td>90.00%</td>
+                <td align="right">13.35</td>
+                <td align="right">79.27</td>
+                <td align="right">3.42</td>
+                </tr>
+                <tr>
+                <td align="right">3667478</td>
+                <td>Tame</td>
+                <td>20.00%</td>
+                <td>Co</td>
+                <td>95.00%</td>
+                <td align="right">6.4616</td>
+                <td align="right">57.0</td>
+                <td align="right">0.51</td>
+                </tr>
+                <tr>
+                <td align="right">3870243</td>
+                <td>Taltal</td>
+                <td>0.00%</td>
+                <td>Cl</td>
+                <td>91.00%</td>
+                <td align="right">-25.408</td>
+                <td align="right">50.77</td>
+                <td align="right">2.08</td>
+                </tr>
+                <tr>
+                <td align="right">4035715</td>
+                <td>Avarua</td>
+                <td>92.00%</td>
+                <td>Ck</td>
+                <td>100.00%</td>
+                <td align="right">-21.2078</td>
+                <td align="right">75.4</td>
+                <td align="right">12.03</td>
+                </tr>
+                <tr>
+                <td align="right">1487332</td>
+                <td>Verkhnyaya Inta</td>
+                <td>68.00%</td>
+                <td>Ru</td>
+                <td>62.00%</td>
+                <td align="right">65.9884</td>
+                <td align="right">-1.25</td>
+                <td align="right">8.46</td>
+                </tr>
+                <tr>
+                <td align="right">548791</td>
+                <td>Kichmengskiy Gorodok</td>
+                <td>64.00%</td>
+                <td>Ru</td>
+                <td>86.00%</td>
+                <td align="right">59.9921</td>
+                <td align="right">10.94</td>
+                <td align="right">2.86</td>
+                </tr>
+                <tr>
+                <td align="right">2398430</td>
+                <td>Mimongo</td>
+                <td>92.00%</td>
+                <td>Ga</td>
+                <td>99.00%</td>
+                <td align="right">-1.6163</td>
+                <td align="right">71.94</td>
+                <td align="right">2.19</td>
+                </tr>
+                <tr>
+                <td align="right">5962442</td>
+                <td>Goderich</td>
+                <td>12.00%</td>
+                <td>Ca</td>
+                <td>46.00%</td>
+                <td align="right">43.7407</td>
+                <td align="right">38.44</td>
+                <td align="right">19.3</td>
+                </tr>
+                <tr>
+                <td align="right">6167817</td>
+                <td>Torbay</td>
+                <td>0.00%</td>
+                <td>Ca</td>
+                <td>100.00%</td>
+                <td align="right">47.6577</td>
+                <td align="right">20.46</td>
+                <td align="right">6.44</td>
+                </tr>
+                <tr>
+                <td align="right">707451</td>
+                <td>Ivanivka</td>
+                <td>80.00%</td>
+                <td>Ua</td>
+                <td>95.00%</td>
+                <td align="right">46.9824</td>
+                <td align="right">40.69</td>
+                <td align="right">2.86</td>
+                </tr>
+                <tr>
+                <td align="right">5915327</td>
+                <td>Cap-aux-meules</td>
+                <td>0.00%</td>
+                <td>Ca</td>
+                <td>100.00%</td>
+                <td align="right">47.3821</td>
+                <td align="right">28.09</td>
+                <td align="right">7.45</td>
+                </tr>
+                <tr>
+                <td align="right">964406</td>
+                <td>Port Shepstone</td>
+                <td>8.00%</td>
+                <td>Za</td>
+                <td>96.00%</td>
+                <td align="right">-30.7414</td>
+                <td align="right">71.24</td>
+                <td align="right">14.38</td>
+                </tr>
+                <tr>
+                <td align="right">2742416</td>
+                <td>Barcelos</td>
+                <td>48.00%</td>
+                <td>Pt</td>
+                <td>100.00%</td>
+                <td align="right">41.5314</td>
+                <td align="right">50.56</td>
+                <td align="right">0.96</td>
+                </tr>
+                <tr>
+                <td align="right">3668257</td>
+                <td>Saravena</td>
+                <td>36.00%</td>
+                <td>Co</td>
+                <td>75.00%</td>
+                <td align="right">6.9564</td>
+                <td align="right">68.63</td>
+                <td align="right">2.19</td>
+                </tr>
+                <tr>
+                <td align="right">3031582</td>
+                <td>Saint-augustin</td>
+                <td>56.00%</td>
+                <td>Fr</td>
+                <td>94.00%</td>
+                <td align="right">44.8323</td>
+                <td align="right">46.08</td>
+                <td align="right">5.21</td>
+                </tr>
+                <tr>
+                <td align="right">558487</td>
+                <td>Grivenskaya</td>
+                <td>92.00%</td>
+                <td>Ru</td>
+                <td>94.00%</td>
+                <td align="right">45.645</td>
+                <td align="right">44.49</td>
+                <td align="right">4.65</td>
+                </tr>
+                <tr>
+                <td align="right">1790645</td>
+                <td>Xiamen</td>
+                <td>36.00%</td>
+                <td>Cn</td>
+                <td>99.00%</td>
+                <td align="right">24.4587</td>
+                <td align="right">65.73</td>
+                <td align="right">3.2</td>
+                </tr>
+                <tr>
+                <td align="right">3394500</td>
+                <td>Morada Nova</td>
+                <td>76.00%</td>
+                <td>Br</td>
+                <td>97.00%</td>
+                <td align="right">-5.0974</td>
+                <td align="right">70.83</td>
+                <td align="right">5.55</td>
+                </tr>
+                <tr>
+                <td align="right">217389</td>
+                <td>Demba</td>
+                <td>32.00%</td>
+                <td>Cd</td>
+                <td>93.00%</td>
+                <td align="right">-5.469</td>
+                <td align="right">73.47</td>
+                <td align="right">3.53</td>
+                </tr>
+                <tr>
+                <td align="right">1630662</td>
+                <td>Praya</td>
+                <td>48.00%</td>
+                <td>Id</td>
+                <td>100.00%</td>
+                <td align="right">-8.7054</td>
+                <td align="right">75.65</td>
+                <td align="right">6.89</td>
+                </tr>
+                <tr>
+                <td align="right">1252783</td>
+                <td>Yarada</td>
+                <td>0.00%</td>
+                <td>In</td>
+                <td>100.00%</td>
+                <td align="right">17.65</td>
+                <td align="right">81.5</td>
+                <td align="right">16.06</td>
+                </tr>
+                <tr>
+                <td align="right">1796236</td>
+                <td>Shanghai</td>
+                <td>0.00%</td>
+                <td>Cn</td>
+                <td>86.00%</td>
+                <td align="right">31.2253</td>
+                <td align="right">61.83</td>
+                <td align="right">4.43</td>
+                </tr>
+                <tr>
+                <td align="right">6096551</td>
+                <td>Pangnirtung</td>
+                <td>76.00%</td>
+                <td>Ca</td>
+                <td>76.00%</td>
+                <td align="right">66.149</td>
+                <td align="right">10.87</td>
+                <td align="right">8.9</td>
+                </tr>
+                <tr>
+                <td align="right">934479</td>
+                <td>Grand Gaube</td>
+                <td>48.00%</td>
+                <td>Mu</td>
+                <td>100.00%</td>
+                <td align="right">-20.0064</td>
+                <td align="right">75.56</td>
+                <td align="right">8.79</td>
+                </tr>
+                <tr>
+                <td align="right">64814</td>
+                <td>Bandarbeyla</td>
+                <td>20.00%</td>
+                <td>So</td>
+                <td>100.00%</td>
+                <td align="right">9.4942</td>
+                <td align="right">79.05</td>
+                <td align="right">13.49</td>
+                </tr>
+                <tr>
+                <td align="right">1849831</td>
+                <td>Toyooka</td>
+                <td>12.00%</td>
+                <td>Jp</td>
+                <td>70.00%</td>
+                <td align="right">35.5464</td>
+                <td align="right">67.84</td>
+                <td align="right">3.53</td>
+                </tr>
+                <tr>
+                <td align="right">1282256</td>
+                <td>Hithadhoo</td>
+                <td>56.00%</td>
+                <td>Mv</td>
+                <td>100.00%</td>
+                <td align="right">-0.6</td>
+                <td align="right">84.04</td>
+                <td align="right">1.97</td>
+                </tr>
+                <tr>
+                <td align="right">6431379</td>
+                <td>Saint-alexandre</td>
+                <td>20.00%</td>
+                <td>Fr</td>
+                <td>68.00%</td>
+                <td align="right">44.228</td>
+                <td align="right">47.5</td>
+                <td align="right">13.15</td>
+                </tr>
+                <tr>
+                <td align="right">3873441</td>
+                <td>Los Rastrojos</td>
+                <td>0.00%</td>
+                <td>Cl</td>
+                <td>71.00%</td>
+                <td align="right">-34.4646</td>
+                <td align="right">59.16</td>
+                <td align="right">1.07</td>
+                </tr>
+                <tr>
+                <td align="right">513328</td>
+                <td>Ozinki</td>
+                <td>0.00%</td>
+                <td>Ru</td>
+                <td>87.00%</td>
+                <td align="right">51.2</td>
+                <td align="right">17.64</td>
+                <td align="right">9.01</td>
+                </tr>
+                <tr>
+                <td align="right">463838</td>
+                <td>Zelenoborskiy</td>
+                <td>12.00%</td>
+                <td>Ru</td>
+                <td>71.00%</td>
+                <td align="right">66.845</td>
+                <td align="right">11.1</td>
+                <td align="right">6.89</td>
+                </tr>
+                <tr>
+                <td align="right">5826559</td>
+                <td>Green River</td>
+                <td>8.00%</td>
+                <td>Us</td>
+                <td>75.00%</td>
+                <td align="right">41.5291</td>
+                <td align="right">33.13</td>
+                <td align="right">6.22</td>
+                </tr>
+                <tr>
+                <td align="right">1266330</td>
+                <td>Kokrajhar</td>
+                <td>68.00%</td>
+                <td>In</td>
+                <td>97.00%</td>
+                <td align="right">26.4004</td>
+                <td align="right">63.34</td>
+                <td align="right">8.23</td>
+                </tr>
+                <tr>
+                <td align="right">5456049</td>
+                <td>Aztec</td>
+                <td>56.00%</td>
+                <td>Us</td>
+                <td>58.00%</td>
+                <td align="right">36.8221</td>
+                <td align="right">53.19</td>
+                <td align="right">4.99</td>
+                </tr>
+                <tr>
+                <td align="right">1078553</td>
+                <td>Ampanihy</td>
+                <td>0.00%</td>
+                <td>Mg</td>
+                <td>86.00%</td>
+                <td align="right">-24.6942</td>
+                <td align="right">59.38</td>
+                <td align="right">2.75</td>
+                </tr>
+                <tr>
+                <td align="right">3393692</td>
+                <td>Itarema</td>
+                <td>36.00%</td>
+                <td>Br</td>
+                <td>99.00%</td>
+                <td align="right">-2.9248</td>
+                <td align="right">72.81</td>
+                <td align="right">2.53</td>
+                </tr>
+                <tr>
+                <td align="right">2708365</td>
+                <td>Halmstad</td>
+                <td>88.00%</td>
+                <td>Se</td>
+                <td>100.00%</td>
+                <td align="right">56.674</td>
+                <td align="right">31.06</td>
+                <td align="right">17.74</td>
+                </tr>
+                <tr>
+                <td align="right">2013465</td>
+                <td>Verkhoyansk</td>
+                <td>20.00%</td>
+                <td>Ru</td>
+                <td>68.00%</td>
+                <td align="right">67.5527</td>
+                <td align="right">14.36</td>
+                <td align="right">2.19</td>
+                </tr>
+                <tr>
+                <td align="right">2075265</td>
+                <td>Busselton</td>
+                <td>44.00%</td>
+                <td>Au</td>
+                <td>100.00%</td>
+                <td align="right">-33.6445</td>
+                <td align="right">64.72</td>
+                <td align="right">8.34</td>
+                </tr>
+                <tr>
+                <td align="right">2109528</td>
+                <td>Buala</td>
+                <td>44.00%</td>
+                <td>Sb</td>
+                <td>93.00%</td>
+                <td align="right">-8.1456</td>
+                <td align="right">84.92</td>
+                <td align="right">5.44</td>
+                </tr>
+                <tr>
+                <td align="right">1263997</td>
+                <td>Mamallapuram</td>
+                <td>8.00%</td>
+                <td>In</td>
+                <td>100.00%</td>
+                <td align="right">12.6264</td>
+                <td align="right">78.03</td>
+                <td align="right">6.55</td>
+                </tr>
+                <tr>
+                <td align="right">1264976</td>
+                <td>Leh</td>
+                <td>24.00%</td>
+                <td>In</td>
+                <td>65.00%</td>
+                <td align="right">34.1642</td>
+                <td align="right">-19.16</td>
+                <td align="right">0.63</td>
+                </tr>
+                <tr>
+                <td align="right">3146831</td>
+                <td>Lundamo</td>
+                <td>0.00%</td>
+                <td>No</td>
+                <td>59.00%</td>
+                <td align="right">63.1532</td>
+                <td align="right">14.79</td>
+                <td align="right">2.19</td>
+                </tr>
+                <tr>
+                <td align="right">2122090</td>
+                <td>Pevek</td>
+                <td>8.00%</td>
+                <td>Ru</td>
+                <td>83.00%</td>
+                <td align="right">69.7028</td>
+                <td align="right">-0.8</td>
+                <td align="right">4.32</td>
+                </tr>
+                <tr>
+                <td align="right">1258864</td>
+                <td>Rajgir</td>
+                <td>0.00%</td>
+                <td>In</td>
+                <td>49.00%</td>
+                <td align="right">25.0306</td>
+                <td align="right">66.25</td>
+                <td align="right">2.64</td>
+                </tr>
+                <tr>
+                <td align="right">3146487</td>
+                <td>Raudeberg</td>
+                <td>88.00%</td>
+                <td>No</td>
+                <td>100.00%</td>
+                <td align="right">61.9875</td>
+                <td align="right">35.8</td>
+                <td align="right">2.42</td>
+                </tr>
+                <tr>
+                <td align="right">2873499</td>
+                <td>Mariental</td>
+                <td>56.00%</td>
+                <td>De</td>
+                <td>87.00%</td>
+                <td align="right">52.2777</td>
+                <td align="right">36.25</td>
+                <td align="right">2.98</td>
+                </tr>
+                <tr>
+                <td align="right">986717</td>
+                <td>Kruisfontein</td>
+                <td>8.00%</td>
+                <td>Za</td>
+                <td>93.00%</td>
+                <td align="right">-34.0034</td>
+                <td align="right">59.88</td>
+                <td align="right">11.03</td>
+                </tr>
+                <tr>
+                <td align="right">553725</td>
+                <td>Kamenka</td>
+                <td>56.00%</td>
+                <td>Ru</td>
+                <td>90.00%</td>
+                <td align="right">53.185</td>
+                <td align="right">20.55</td>
+                <td align="right">13.49</td>
+                </tr>
+                <tr>
+                <td align="right">6201424</td>
+                <td>Mataura</td>
+                <td>92.00%</td>
+                <td>Nz</td>
+                <td>59.00%</td>
+                <td align="right">-46.1928</td>
+                <td align="right">66.09</td>
+                <td align="right">21.88</td>
+                </tr>
+                <tr>
+                <td align="right">2146219</td>
+                <td>Hervey Bay</td>
+                <td>48.00%</td>
+                <td>Au</td>
+                <td>97.00%</td>
+                <td align="right">-25.2986</td>
+                <td align="right">78.03</td>
+                <td align="right">15.73</td>
+                </tr>
+                <tr>
+                <td align="right">6165406</td>
+                <td>Thompson</td>
+                <td>76.00%</td>
+                <td>Ca</td>
+                <td>73.00%</td>
+                <td align="right">55.7433</td>
+                <td align="right">31.93</td>
+                <td align="right">11.36</td>
+                </tr>
+                <tr>
+                <td align="right">917688</td>
+                <td>Chongwe</td>
+                <td>76.00%</td>
+                <td>Zm</td>
+                <td>97.00%</td>
+                <td align="right">-15.3275</td>
+                <td align="right">63.66</td>
+                <td align="right">2.98</td>
+                </tr>
+                <tr>
+                <td align="right">2132606</td>
+                <td>Samarai</td>
+                <td>24.00%</td>
+                <td>Pg</td>
+                <td>100.00%</td>
+                <td align="right">-10.6167</td>
+                <td align="right">84.51</td>
+                <td align="right">4.76</td>
+                </tr>
+                <tr>
+                <td align="right">546105</td>
+                <td>Nikolskoye</td>
+                <td>48.00%</td>
+                <td>Ru</td>
+                <td>68.00%</td>
+                <td align="right">59.7035</td>
+                <td align="right">17.89</td>
+                <td align="right">5.77</td>
+                </tr>
+                <tr>
+                <td align="right">3451261</td>
+                <td>Caxito</td>
+                <td>24.00%</td>
+                <td>Br</td>
+                <td>72.00%</td>
+                <td align="right">-22.6492</td>
+                <td align="right">75.02</td>
+                <td align="right">11.7</td>
+                </tr>
+                <tr>
+                <td align="right">3397119</td>
+                <td>Jucas</td>
+                <td>92.00%</td>
+                <td>Br</td>
+                <td>90.00%</td>
+                <td align="right">-6.5253</td>
+                <td align="right">68.95</td>
+                <td align="right">0.29</td>
+                </tr>
+                <tr>
+                <td align="right">3465542</td>
+                <td>Coracao De Jesus</td>
+                <td>20.00%</td>
+                <td>Br</td>
+                <td>62.00%</td>
+                <td align="right">-16.6853</td>
+                <td align="right">72.23</td>
+                <td align="right">10.8</td>
+                </tr>
+                <tr>
+                <td align="right">934649</td>
+                <td>Cap Malheureux</td>
+                <td>48.00%</td>
+                <td>Mu</td>
+                <td>100.00%</td>
+                <td align="right">-19.9842</td>
+                <td align="right">75.56</td>
+                <td align="right">8.79</td>
+                </tr>
+                <tr>
+                <td align="right">4267710</td>
+                <td>Sitka</td>
+                <td>92.00%</td>
+                <td>Us</td>
+                <td>26.00%</td>
+                <td align="right">37.175</td>
+                <td align="right">69.17</td>
+                <td align="right">15.84</td>
+                </tr>
+                <tr>
+                <td align="right">2163355</td>
+                <td>Hobart</td>
+                <td>24.00%</td>
+                <td>Au</td>
+                <td>72.00%</td>
+                <td align="right">-42.8826</td>
+                <td align="right">59.76</td>
+                <td align="right">4.99</td>
+                </tr>
+                <tr>
+                <td align="right">3985710</td>
+                <td>Cabo San Lucas</td>
+                <td>0.00%</td>
+                <td>Mx</td>
+                <td>91.00%</td>
+                <td align="right">22.8938</td>
+                <td align="right">76.05</td>
+                <td align="right">1.97</td>
+                </tr>
+                <tr>
+                <td align="right">1244713</td>
+                <td>Haputale</td>
+                <td>0.00%</td>
+                <td>Lk</td>
+                <td>99.00%</td>
+                <td align="right">6.7681</td>
+                <td align="right">64.58</td>
+                <td align="right">2.64</td>
+                </tr>
+                <tr>
+                <td align="right">5855927</td>
+                <td>Hilo</td>
+                <td>36.00%</td>
+                <td>Us</td>
+                <td>100.00%</td>
+                <td align="right">19.7072</td>
+                <td align="right">73.85</td>
+                <td align="right">12.59</td>
+                </tr>
+                <tr>
+                <td align="right">1651810</td>
+                <td>Airai</td>
+                <td>24.00%</td>
+                <td>Tl</td>
+                <td>90.00%</td>
+                <td align="right">-8.9266</td>
+                <td align="right">76.41</td>
+                <td align="right">0.4</td>
+                </tr>
+                <tr>
+                <td align="right">2270385</td>
+                <td>Camacha</td>
+                <td>0.00%</td>
+                <td>Pt</td>
+                <td>100.00%</td>
+                <td align="right">33.0833</td>
+                <td align="right">61.05</td>
+                <td align="right">23.33</td>
+                </tr>
+                <tr>
+                <td align="right">6111862</td>
+                <td>Port Hardy</td>
+                <td>92.00%</td>
+                <td>Ca</td>
+                <td>100.00%</td>
+                <td align="right">50.6996</td>
+                <td align="right">41.92</td>
+                <td align="right">7.67</td>
+                </tr>
+                <tr>
+                <td align="right">3640226</td>
+                <td>Guanare</td>
+                <td>44.00%</td>
+                <td>Ve</td>
+                <td>61.00%</td>
+                <td align="right">9.0408</td>
+                <td align="right">84.69</td>
+                <td align="right">2.75</td>
+                </tr>
+                <tr>
+                <td align="right">350203</td>
+                <td>Rosetta</td>
+                <td>32.00%</td>
+                <td>Eg</td>
+                <td>91.00%</td>
+                <td align="right">31.4044</td>
+                <td align="right">48.29</td>
+                <td align="right">2.86</td>
+                </tr>
+                <tr>
+                <td align="right">2265388</td>
+                <td>Ourem</td>
+                <td>0.00%</td>
+                <td>Pt</td>
+                <td>90.00%</td>
+                <td align="right">39.6417</td>
+                <td align="right">49.05</td>
+                <td align="right">8.12</td>
+                </tr>
+                <tr>
+                <td align="right">3382160</td>
+                <td>Cayenne</td>
+                <td>80.00%</td>
+                <td>Gf</td>
+                <td>90.00%</td>
+                <td align="right">4.9371</td>
+                <td align="right">79.47</td>
+                <td align="right">6.55</td>
+                </tr>
+                <tr>
+                <td align="right">1052944</td>
+                <td>Angoche</td>
+                <td>44.00%</td>
+                <td>Mz</td>
+                <td>100.00%</td>
+                <td align="right">-16.2293</td>
+                <td align="right">82.65</td>
+                <td align="right">5.44</td>
+                </tr>
+                <tr>
+                <td align="right">1712961</td>
+                <td>Gigmoto</td>
+                <td>88.00%</td>
+                <td>Ph</td>
+                <td>100.00%</td>
+                <td align="right">13.7796</td>
+                <td align="right">74.14</td>
+                <td align="right">13.27</td>
+                </tr>
+                <tr>
+                <td align="right">1176048</td>
+                <td>Jati</td>
+                <td>68.00%</td>
+                <td>Pk</td>
+                <td>57.00%</td>
+                <td align="right">24.3534</td>
+                <td align="right">70.36</td>
+                <td align="right">9.01</td>
+                </tr>
+                <tr>
+                <td align="right">2337542</td>
+                <td>Naze</td>
+                <td>0.00%</td>
+                <td>Ng</td>
+                <td>94.00%</td>
+                <td align="right">5.4333</td>
+                <td align="right">71.49</td>
+                <td align="right">6.89</td>
+                </tr>
+                <tr>
+                <td align="right">2338660</td>
+                <td>Yaan</td>
+                <td>0.00%</td>
+                <td>Ng</td>
+                <td>70.00%</td>
+                <td align="right">7.3833</td>
+                <td align="right">77.63</td>
+                <td align="right">12.48</td>
+                </tr>
+                <tr>
+                <td align="right">5353775</td>
+                <td>Grass Valley</td>
+                <td>0.00%</td>
+                <td>Us</td>
+                <td>51.00%</td>
+                <td align="right">39.2191</td>
+                <td align="right">61.0</td>
+                <td align="right">12.15</td>
+                </tr>
+                <tr>
+                <td align="right">2126710</td>
+                <td>Beringovskiy</td>
+                <td>80.00%</td>
+                <td>Ru</td>
+                <td>100.00%</td>
+                <td align="right">63.05</td>
+                <td align="right">15.78</td>
+                <td align="right">21.77</td>
+                </tr>
+                <tr>
+                <td align="right">3704327</td>
+                <td>Meteti</td>
+                <td>0.00%</td>
+                <td>Pa</td>
+                <td>65.00%</td>
+                <td align="right">8.4997</td>
+                <td align="right">79.21</td>
+                <td align="right">10.8</td>
+                </tr>
+                <tr>
+                <td align="right">3406442</td>
+                <td>Barbalha</td>
+                <td>80.00%</td>
+                <td>Br</td>
+                <td>95.00%</td>
+                <td align="right">-7.3067</td>
+                <td align="right">74.05</td>
+                <td align="right">3.31</td>
+                </tr>
+                <tr>
+                <td align="right">1053384</td>
+                <td>Toamasina</td>
+                <td>64.00%</td>
+                <td>Mg</td>
+                <td>98.00%</td>
+                <td align="right">-18.1667</td>
+                <td align="right">73.17</td>
+                <td align="right">2.19</td>
+                </tr>
+                <tr>
+                <td align="right">2633414</td>
+                <td>Yarmouth</td>
+                <td>92.00%</td>
+                <td>Gb</td>
+                <td>97.00%</td>
+                <td align="right">50.7055</td>
+                <td align="right">44.06</td>
+                <td align="right">10.47</td>
+                </tr>
+                <tr>
+                <td align="right">2037886</td>
+                <td>Dandong</td>
+                <td>92.00%</td>
+                <td>Cn</td>
+                <td>97.00%</td>
+                <td align="right">40.1193</td>
+                <td align="right">44.17</td>
+                <td align="right">7.78</td>
+                </tr>
+                <tr>
+                <td align="right">1215502</td>
+                <td>Banda Aceh</td>
+                <td>8.00%</td>
+                <td>Id</td>
+                <td>99.00%</td>
+                <td align="right">5.5577</td>
+                <td align="right">71.2</td>
+                <td align="right">2.75</td>
+                </tr>
+                <tr>
+                <td align="right">1259385</td>
+                <td>Port Blair</td>
+                <td>12.00%</td>
+                <td>In</td>
+                <td>100.00%</td>
+                <td align="right">11.6667</td>
+                <td align="right">82.67</td>
+                <td align="right">1.86</td>
+                </tr>
+                <tr>
+                <td align="right">2013918</td>
+                <td>Ust-maya</td>
+                <td>92.00%</td>
+                <td>Ru</td>
+                <td>84.00%</td>
+                <td align="right">60.4164</td>
+                <td align="right">22.06</td>
+                <td align="right">8.68</td>
+                </tr>
+                <tr>
+                <td align="right">2656708</td>
+                <td>Ayr</td>
+                <td>92.00%</td>
+                <td>Gb</td>
+                <td>100.00%</td>
+                <td align="right">55.4594</td>
+                <td align="right">43.12</td>
+                <td align="right">22.66</td>
+                </tr>
+                <tr>
+                <td align="right">1795632</td>
+                <td>Shenjiamen</td>
+                <td>68.00%</td>
+                <td>Cn</td>
+                <td>94.00%</td>
+                <td align="right">29.9576</td>
+                <td align="right">56.59</td>
+                <td align="right">4.32</td>
+                </tr>
+                <tr>
+                <td align="right">1718234</td>
+                <td>Caruray</td>
+                <td>24.00%</td>
+                <td>Ph</td>
+                <td>100.00%</td>
+                <td align="right">10.3094</td>
+                <td align="right">80.22</td>
+                <td align="right">9.57</td>
+                </tr>
+                <tr>
+                <td align="right">1067565</td>
+                <td>Beloha</td>
+                <td>8.00%</td>
+                <td>Mg</td>
+                <td>92.00%</td>
+                <td align="right">-25.1739</td>
+                <td align="right">68.14</td>
+                <td align="right">7.9</td>
+                </tr>
+                <tr>
+                <td align="right">1622318</td>
+                <td>Waingapu</td>
+                <td>12.00%</td>
+                <td>Id</td>
+                <td>82.00%</td>
+                <td align="right">-9.6522</td>
+                <td align="right">87.04</td>
+                <td align="right">4.99</td>
+                </tr>
+                <tr>
+                <td align="right">1732738</td>
+                <td>Kota Tinggi</td>
+                <td>76.00%</td>
+                <td>My</td>
+                <td>100.00%</td>
+                <td align="right">1.7331</td>
+                <td align="right">77.92</td>
+                <td align="right">5.77</td>
+                </tr>
+                <tr>
+                <td align="right">2381334</td>
+                <td>Atar</td>
+                <td>80.00%</td>
+                <td>Mr</td>
+                <td>37.00%</td>
+                <td align="right">20.5183</td>
+                <td align="right">63.18</td>
+                <td align="right">6.44</td>
+                </tr>
+                <tr>
+                <td align="right">2012956</td>
+                <td>Yerbogachen</td>
+                <td>0.00%</td>
+                <td>Ru</td>
+                <td>74.00%</td>
+                <td align="right">61.2767</td>
+                <td align="right">8.87</td>
+                <td align="right">4.76</td>
+                </tr>
+                <tr>
+                <td align="right">1267390</td>
+                <td>Kavaratti</td>
+                <td>36.00%</td>
+                <td>In</td>
+                <td>100.00%</td>
+                <td align="right">10.5669</td>
+                <td align="right">82.67</td>
+                <td align="right">4.21</td>
+                </tr>
+                <tr>
+                <td align="right">5911745</td>
+                <td>Burns Lake</td>
+                <td>92.00%</td>
+                <td>Ca</td>
+                <td>73.00%</td>
+                <td align="right">54.2332</td>
+                <td align="right">38.17</td>
+                <td align="right">10.69</td>
+                </tr>
+                <tr>
+                <td align="right">921786</td>
+                <td>Mitsamiouli</td>
+                <td>8.00%</td>
+                <td>Km</td>
+                <td>100.00%</td>
+                <td align="right">-11.3848</td>
+                <td align="right">77.36</td>
+                <td align="right">2.3</td>
+                </tr>
+                <tr>
+                <td align="right">245669</td>
+                <td>Adre</td>
+                <td>0.00%</td>
+                <td>Td</td>
+                <td>55.00%</td>
+                <td align="right">13.4667</td>
+                <td align="right">63.82</td>
+                <td align="right">3.31</td>
+                </tr>
+                <tr>
+                <td align="right">2186313</td>
+                <td>Napier</td>
+                <td>0.00%</td>
+                <td>Nz</td>
+                <td>85.00%</td>
+                <td align="right">-39.4909</td>
+                <td align="right">74.21</td>
+                <td align="right">1.19</td>
+                </tr>
+                <tr>
+                <td align="right">2164771</td>
+                <td>Grafton</td>
+                <td>92.00%</td>
+                <td>Au</td>
+                <td>98.00%</td>
+                <td align="right">-29.6913</td>
+                <td align="right">69.3</td>
+                <td align="right">6.67</td>
+                </tr>
+                <tr>
+                <td align="right">1504382</td>
+                <td>Kargasok</td>
+                <td>80.00%</td>
+                <td>Ru</td>
+                <td>78.00%</td>
+                <td align="right">59.0598</td>
+                <td align="right">23.76</td>
+                <td align="right">8.23</td>
+                </tr>
+                <tr>
+                <td align="right">647572</td>
+                <td>Loviisa</td>
+                <td>0.00%</td>
+                <td>Fi</td>
+                <td>94.00%</td>
+                <td align="right">60.4562</td>
+                <td align="right">12.88</td>
+                <td align="right">5.21</td>
+                </tr>
+                <tr>
+                <td align="right">233019</td>
+                <td>Kaberamaido</td>
+                <td>8.00%</td>
+                <td>Ug</td>
+                <td>89.00%</td>
+                <td align="right">1.7638</td>
+                <td align="right">64.06</td>
+                <td align="right">7.78</td>
+                </tr>
+                <tr>
+                <td align="right">3833859</td>
+                <td>Barrow</td>
+                <td>24.00%</td>
+                <td>Ar</td>
+                <td>53.00%</td>
+                <td align="right">-38.3131</td>
+                <td align="right">48.27</td>
+                <td align="right">8.68</td>
+                </tr>
+                <tr>
+                <td align="right">542322</td>
+                <td>Krasnokholm</td>
+                <td>64.00%</td>
+                <td>Ru</td>
+                <td>90.00%</td>
+                <td align="right">51.5979</td>
+                <td align="right">22.42</td>
+                <td align="right">10.92</td>
+                </tr>
+                <tr>
+                <td align="right">2418596</td>
+                <td>Koundara</td>
+                <td>0.00%</td>
+                <td>Gn</td>
+                <td>58.00%</td>
+                <td align="right">12.4852</td>
+                <td align="right">70.47</td>
+                <td align="right">3.87</td>
+                </tr>
+                <tr>
+                <td align="right">1847947</td>
+                <td>Shingu</td>
+                <td>64.00%</td>
+                <td>Jp</td>
+                <td>92.00%</td>
+                <td align="right">33.7241</td>
+                <td align="right">63.37</td>
+                <td align="right">1.52</td>
+                </tr>
+                <tr>
+                <td align="right">502265</td>
+                <td>Mirnyy</td>
+                <td>92.00%</td>
+                <td>Ru</td>
+                <td>98.00%</td>
+                <td align="right">56.5712</td>
+                <td align="right">18.1</td>
+                <td align="right">15.17</td>
+                </tr>
+                <tr>
+                <td align="right">4031742</td>
+                <td>Egvekinot</td>
+                <td>80.00%</td>
+                <td>Ru</td>
+                <td>83.00%</td>
+                <td align="right">66.3167</td>
+                <td align="right">10.54</td>
+                <td align="right">4.21</td>
+                </tr>
+                <tr>
+                <td align="right">1024312</td>
+                <td>Mocuba</td>
+                <td>0.00%</td>
+                <td>Mz</td>
+                <td>77.00%</td>
+                <td align="right">-16.8393</td>
+                <td align="right">75.65</td>
+                <td align="right">4.99</td>
+                </tr>
+                <tr>
+                <td align="right">4004293</td>
+                <td>Ixtapa</td>
+                <td>0.00%</td>
+                <td>Mx</td>
+                <td>50.00%</td>
+                <td align="right">20.715</td>
+                <td align="right">74.68</td>
+                <td align="right">2.86</td>
+                </tr>
+                <tr>
+                <td align="right">1255619</td>
+                <td>Srivardhan</td>
+                <td>0.00%</td>
+                <td>In</td>
+                <td>92.00%</td>
+                <td align="right">18.0333</td>
+                <td align="right">68.04</td>
+                <td align="right">3.09</td>
+                </tr>
+                <tr>
+                <td align="right">1488414</td>
+                <td>Urengoy</td>
+                <td>80.00%</td>
+                <td>Ru</td>
+                <td>82.00%</td>
+                <td align="right">65.9642</td>
+                <td align="right">14.63</td>
+                <td align="right">17.07</td>
+                </tr>
+                <tr>
+                <td align="right">328316</td>
+                <td>Bolo</td>
+                <td>0.00%</td>
+                <td>Et</td>
+                <td>55.00%</td>
+                <td align="right">8.2444</td>
+                <td align="right">45.82</td>
+                <td align="right">5.55</td>
+                </tr>
+                <tr>
+                <td align="right">4031574</td>
+                <td>Provideniya</td>
+                <td>92.00%</td>
+                <td>Ru</td>
+                <td>100.00%</td>
+                <td align="right">64.4238</td>
+                <td align="right">23.76</td>
+                <td align="right">23.44</td>
+                </tr>
+                <tr>
+                <td align="right">6113406</td>
+                <td>Prince Rupert</td>
+                <td>92.00%</td>
+                <td>Ca</td>
+                <td>100.00%</td>
+                <td align="right">54.3161</td>
+                <td align="right">42.87</td>
+                <td align="right">7.78</td>
+                </tr>
+                <tr>
+                <td align="right">503977</td>
+                <td>Marfino</td>
+                <td>92.00%</td>
+                <td>Ru</td>
+                <td>98.00%</td>
+                <td align="right">56.0719</td>
+                <td align="right">33.78</td>
+                <td align="right">10.69</td>
+                </tr>
+                <tr>
+                <td align="right">3453439</td>
+                <td>Ponta Do Sol</td>
+                <td>8.00%</td>
+                <td>Br</td>
+                <td>65.00%</td>
+                <td align="right">-20.6335</td>
+                <td align="right">61.88</td>
+                <td align="right">6.44</td>
+                </tr>
+                <tr>
+                <td align="right">6145890</td>
+                <td>Shelburne</td>
+                <td>8.00%</td>
+                <td>Ca</td>
+                <td>43.00%</td>
+                <td align="right">44.0785</td>
+                <td align="right">37.45</td>
+                <td align="right">15.73</td>
+                </tr>
+                <tr>
+                <td align="right">3387082</td>
+                <td>Tabira</td>
+                <td>88.00%</td>
+                <td>Br</td>
+                <td>98.00%</td>
+                <td align="right">-7.5837</td>
+                <td align="right">63.88</td>
+                <td align="right">2.86</td>
+                </tr>
+                <tr>
+                <td align="right">2079582</td>
+                <td>Alyangula</td>
+                <td>24.00%</td>
+                <td>Au</td>
+                <td>91.00%</td>
+                <td align="right">-13.8484</td>
+                <td align="right">90.07</td>
+                <td align="right">8.01</td>
+                </tr>
+                <tr>
+                <td align="right">3595803</td>
+                <td>Escuintla</td>
+                <td>0.00%</td>
+                <td>Gt</td>
+                <td>34.00%</td>
+                <td align="right">14.2904</td>
+                <td align="right">77.76</td>
+                <td align="right">1.74</td>
+                </tr>
+                <tr>
+                <td align="right">3372707</td>
+                <td>Ribeira Grande</td>
+                <td>92.00%</td>
+                <td>Pt</td>
+                <td>98.00%</td>
+                <td align="right">38.5167</td>
+                <td align="right">62.96</td>
+                <td align="right">8.34</td>
+                </tr>
+                <tr>
+                <td align="right">877747</td>
+                <td>Mtwara</td>
+                <td>92.00%</td>
+                <td>Tz</td>
+                <td>100.00%</td>
+                <td align="right">-10.2812</td>
+                <td align="right">82.04</td>
+                <td align="right">6.11</td>
+                </tr>
+                <tr>
+                <td align="right">4034551</td>
+                <td>Faanui</td>
+                <td>68.00%</td>
+                <td>Pf</td>
+                <td>100.00%</td>
+                <td align="right">-16.4834</td>
+                <td align="right">82.27</td>
+                <td align="right">17.18</td>
+                </tr>
+                <tr>
+                <td align="right">3369157</td>
+                <td>Cape Town</td>
+                <td>0.00%</td>
+                <td>Za</td>
+                <td>98.00%</td>
+                <td align="right">-33.929</td>
+                <td align="right">58.48</td>
+                <td align="right">11.03</td>
+                </tr>
+                <tr>
+                <td align="right">5848280</td>
+                <td>Kapaa</td>
+                <td>0.00%</td>
+                <td>Us</td>
+                <td>78.00%</td>
+                <td align="right">22.0752</td>
+                <td align="right">77.83</td>
+                <td align="right">5.66</td>
+                </tr>
+                <tr>
+                <td align="right">2185329</td>
+                <td>Waipawa</td>
+                <td>0.00%</td>
+                <td>Nz</td>
+                <td>53.00%</td>
+                <td align="right">-39.9412</td>
+                <td align="right">79.99</td>
+                <td align="right">4.88</td>
+                </tr>
+                <tr>
+                <td align="right">3874787</td>
+                <td>Punta Arenas</td>
+                <td>8.00%</td>
+                <td>Cl</td>
+                <td>96.00%</td>
+                <td align="right">-53.1627</td>
+                <td align="right">44.64</td>
+                <td align="right">34.18</td>
+                </tr>
+                <tr>
+                <td align="right">359792</td>
+                <td>Aswan</td>
+                <td>24.00%</td>
+                <td>Eg</td>
+                <td>41.00%</td>
+                <td align="right">24.0911</td>
+                <td align="right">68.74</td>
+                <td align="right">7.0</td>
+                </tr>
+                <tr>
+                <td align="right">610091</td>
+                <td>Chingirlau</td>
+                <td>0.00%</td>
+                <td>Kz</td>
+                <td>83.00%</td>
+                <td align="right">51.095</td>
+                <td align="right">19.44</td>
+                <td align="right">10.47</td>
+                </tr>
+                <tr>
+                <td align="right">1795565</td>
+                <td>Shenzhen</td>
+                <td>0.00%</td>
+                <td>Cn</td>
+                <td>81.00%</td>
+                <td align="right">22.5446</td>
+                <td align="right">71.85</td>
+                <td align="right">5.66</td>
+                </tr>
+                <tr>
+                <td align="right">3652764</td>
+                <td>Puerto Ayora</td>
+                <td>0.00%</td>
+                <td>Ec</td>
+                <td>94.00%</td>
+                <td align="right">-0.7394</td>
+                <td align="right">81.72</td>
+                <td align="right">10.8</td>
+                </tr>
+                <tr>
+                <td align="right">1491999</td>
+                <td>Shumikha</td>
+                <td>36.00%</td>
+                <td>Ru</td>
+                <td>83.00%</td>
+                <td align="right">55.2282</td>
+                <td align="right">21.58</td>
+                <td align="right">12.59</td>
+                </tr>
+                <tr>
+                <td align="right">3948642</td>
+                <td>Matara</td>
+                <td>64.00%</td>
+                <td>Pe</td>
+                <td>96.00%</td>
+                <td align="right">-13.7417</td>
+                <td align="right">39.42</td>
+                <td align="right">1.97</td>
+                </tr>
+                <tr>
+                <td align="right">463355</td>
+                <td>Zheleznodorozhnyy</td>
+                <td>92.00%</td>
+                <td>Ru</td>
+                <td>98.00%</td>
+                <td align="right">55.7503</td>
+                <td align="right">34.0</td>
+                <td align="right">10.69</td>
+                </tr>
+                <tr>
+                <td align="right">5919850</td>
+                <td>Chapais</td>
+                <td>68.00%</td>
+                <td>Ca</td>
+                <td>75.00%</td>
+                <td align="right">49.7839</td>
+                <td align="right">32.56</td>
+                <td align="right">7.67</td>
+                </tr>
+                <tr>
+                <td align="right">153955</td>
+                <td>Micheweni</td>
+                <td>36.00%</td>
+                <td>Tz</td>
+                <td>100.00%</td>
+                <td align="right">-4.9667</td>
+                <td align="right">78.22</td>
+                <td align="right">5.66</td>
+                </tr>
+                <tr>
+                <td align="right">2191562</td>
+                <td>Dunedin</td>
+                <td>88.00%</td>
+                <td>Nz</td>
+                <td>57.00%</td>
+                <td align="right">-45.874</td>
+                <td align="right">76.82</td>
+                <td align="right">15.5</td>
+                </tr>
+                <tr>
+                <td align="right">2059470</td>
+                <td>Victor Harbor</td>
+                <td>24.00%</td>
+                <td>Au</td>
+                <td>75.00%</td>
+                <td align="right">-35.5546</td>
+                <td align="right">68.0</td>
+                <td align="right">12.82</td>
+                </tr>
+                <tr>
+                <td align="right">94298</td>
+                <td>Kifri</td>
+                <td>0.00%</td>
+                <td>Iq</td>
+                <td>60.00%</td>
+                <td align="right">34.6908</td>
+                <td align="right">51.24</td>
+                <td align="right">4.43</td>
+                </tr>
+                <tr>
+                <td align="right">5554428</td>
+                <td>Ketchikan</td>
+                <td>92.00%</td>
+                <td>Us</td>
+                <td>98.00%</td>
+                <td align="right">55.3422</td>
+                <td align="right">44.78</td>
+                <td align="right">13.71</td>
+                </tr>
+                <tr>
+                <td align="right">2141714</td>
+                <td>Bourail</td>
+                <td>92.00%</td>
+                <td>Nc</td>
+                <td>96.00%</td>
+                <td align="right">-21.567</td>
+                <td align="right">74.37</td>
+                <td align="right">6.89</td>
+                </tr>
+                <tr>
+                <td align="right">5106834</td>
+                <td>Albany</td>
+                <td>0.00%</td>
+                <td>Us</td>
+                <td>54.00%</td>
+                <td align="right">42.6512</td>
+                <td align="right">34.07</td>
+                <td align="right">2.64</td>
+                </tr>
+                <tr>
+                <td align="right">1816440</td>
+                <td>Huaiyuan</td>
+                <td>0.00%</td>
+                <td>Cn</td>
+                <td>81.00%</td>
+                <td align="right">32.973</td>
+                <td align="right">68.22</td>
+                <td align="right">9.24</td>
+                </tr>
+                <tr>
+                <td align="right">6171332</td>
+                <td>Two Hills</td>
+                <td>20.00%</td>
+                <td>Ca</td>
+                <td>90.00%</td>
+                <td align="right">53.7113</td>
+                <td align="right">25.29</td>
+                <td align="right">8.46</td>
+                </tr>
+                <tr>
+                <td align="right">3936456</td>
+                <td>Lima</td>
+                <td>32.00%</td>
+                <td>Pe</td>
+                <td>75.00%</td>
+                <td align="right">-12.0622</td>
+                <td align="right">61.02</td>
+                <td align="right">2.08</td>
+                </tr>
+                <tr>
+                <td align="right">2152659</td>
+                <td>Port Macquarie</td>
+                <td>20.00%</td>
+                <td>Au</td>
+                <td>88.00%</td>
+                <td align="right">-31.43</td>
+                <td align="right">73.65</td>
+                <td align="right">5.32</td>
+                </tr>
+                <tr>
+                <td align="right">2077895</td>
+                <td>Alice Springs</td>
+                <td>0.00%</td>
+                <td>Au</td>
+                <td>34.00%</td>
+                <td align="right">-23.6984</td>
+                <td align="right">76.53</td>
+                <td align="right">5.44</td>
+                </tr>
+                <tr>
+                <td align="right">2036973</td>
+                <td>Heihe</td>
+                <td>0.00%</td>
+                <td>Ru</td>
+                <td>77.00%</td>
+                <td align="right">50.2378</td>
+                <td align="right">46.81</td>
+                <td align="right">4.76</td>
+                </tr>
+                <tr>
+                <td align="right">306571</td>
+                <td>Konya</td>
+                <td>0.00%</td>
+                <td>Tr</td>
+                <td>46.00%</td>
+                <td align="right">37.872</td>
+                <td align="right">45.77</td>
+                <td align="right">9.35</td>
+                </tr>
+                <tr>
+                <td align="right">5367788</td>
+                <td>Lompoc</td>
+                <td>0.00%</td>
+                <td>Us</td>
+                <td>75.00%</td>
+                <td align="right">34.6392</td>
+                <td align="right">61.36</td>
+                <td align="right">17.29</td>
+                </tr>
+                <tr>
+                <td align="right">2737599</td>
+                <td>Saldanha</td>
+                <td>0.00%</td>
+                <td>Pt</td>
+                <td>90.00%</td>
+                <td align="right">41.4184</td>
+                <td align="right">34.38</td>
+                <td align="right">5.21</td>
+                </tr>
+                <tr>
+                <td align="right">3924679</td>
+                <td>Vilhena</td>
+                <td>92.00%</td>
+                <td>Br</td>
+                <td>88.00%</td>
+                <td align="right">-12.7369</td>
+                <td align="right">67.62</td>
+                <td align="right">3.2</td>
+                </tr>
+                <tr>
+                <td align="right">2278158</td>
+                <td>Buchanan</td>
+                <td>8.00%</td>
+                <td>Lr</td>
+                <td>100.00%</td>
+                <td align="right">5.8813</td>
+                <td align="right">79.11</td>
+                <td align="right">4.21</td>
+                </tr>
+                <tr>
+                <td align="right">3440777</td>
+                <td>Rocha</td>
+                <td>0.00%</td>
+                <td>Uy</td>
+                <td>71.00%</td>
+                <td align="right">-34.4811</td>
+                <td align="right">47.93</td>
+                <td align="right">7.34</td>
+                </tr>
+                <tr>
+                <td align="right">464260</td>
+                <td>Zaterechnyy</td>
+                <td>20.00%</td>
+                <td>Ru</td>
+                <td>91.00%</td>
+                <td align="right">44.7971</td>
+                <td align="right">33.82</td>
+                <td align="right">8.57</td>
+                </tr>
+                <tr>
+                <td align="right">2448442</td>
+                <td>Yorosso</td>
+                <td>20.00%</td>
+                <td>Ml</td>
+                <td>28.00%</td>
+                <td align="right">12.3528</td>
+                <td align="right">67.69</td>
+                <td align="right">7.0</td>
+                </tr>
+                <tr>
+                <td align="right">5993072</td>
+                <td>Kitimat</td>
+                <td>92.00%</td>
+                <td>Ca</td>
+                <td>94.00%</td>
+                <td align="right">54.0175</td>
+                <td align="right">35.22</td>
+                <td align="right">3.09</td>
+                </tr>
+                <tr>
+                <td align="right">5762718</td>
+                <td>Belle Fourche</td>
+                <td>68.00%</td>
+                <td>Us</td>
+                <td>76.00%</td>
+                <td align="right">44.6709</td>
+                <td align="right">30.34</td>
+                <td align="right">5.99</td>
+                </tr>
+                <tr>
+                <td align="right">1652203</td>
+                <td>Xam Nua</td>
+                <td>100.00%</td>
+                <td>La</td>
+                <td>99.00%</td>
+                <td align="right">20.4197</td>
+                <td align="right">61.66</td>
+                <td align="right">1.74</td>
+                </tr>
+                <tr>
+                <td align="right">2409215</td>
+                <td>Mattru</td>
+                <td>64.00%</td>
+                <td>Sl</td>
+                <td>91.00%</td>
+                <td align="right">7.6244</td>
+                <td align="right">73.62</td>
+                <td align="right">2.64</td>
+                </tr>
+                <tr>
+                <td align="right">2065594</td>
+                <td>Mount Isa</td>
+                <td>0.00%</td>
+                <td>Au</td>
+                <td>56.00%</td>
+                <td align="right">-20.729</td>
+                <td align="right">83.46</td>
+                <td align="right">10.69</td>
+                </tr>
+                <tr>
+                <td align="right">4167694</td>
+                <td>Panama City</td>
+                <td>80.00%</td>
+                <td>Us</td>
+                <td>87.00%</td>
+                <td align="right">30.1601</td>
+                <td align="right">70.93</td>
+                <td align="right">13.82</td>
+                </tr>
+                <tr>
+                <td align="right">3031871</td>
+                <td>Veraval</td>
+                <td>80.00%</td>
+                <td>Fr</td>
+                <td>92.00%</td>
+                <td align="right">49.6457</td>
+                <td align="right">40.19</td>
+                <td align="right">7.11</td>
+                </tr>
+                <tr>
+                <td align="right">2399001</td>
+                <td>Mayumba</td>
+                <td>64.00%</td>
+                <td>Ga</td>
+                <td>100.00%</td>
+                <td align="right">-3.4391</td>
+                <td align="right">76.87</td>
+                <td align="right">6.44</td>
+                </tr>
+                <tr>
+                <td align="right">2374688</td>
+                <td>Bolama</td>
+                <td>68.00%</td>
+                <td>Gw</td>
+                <td>100.00%</td>
+                <td align="right">11.5776</td>
+                <td align="right">78.58</td>
+                <td align="right">8.57</td>
+                </tr>
+                <tr>
+                <td align="right">286987</td>
+                <td>Nizwa</td>
+                <td>0.00%</td>
+                <td>Om</td>
+                <td>46.00%</td>
+                <td align="right">22.9324</td>
+                <td align="right">52.07</td>
+                <td align="right">3.65</td>
+                </tr>
+                <tr>
+                <td align="right">3867291</td>
+                <td>Filadelfia</td>
+                <td>48.00%</td>
+                <td>Py</td>
+                <td>73.00%</td>
+                <td align="right">-22.3529</td>
+                <td align="right">60.19</td>
+                <td align="right">5.55</td>
+                </tr>
+                <tr>
+                <td align="right">1524298</td>
+                <td>Aksu</td>
+                <td>0.00%</td>
+                <td>Kz</td>
+                <td>79.00%</td>
+                <td align="right">52.0354</td>
+                <td align="right">15.87</td>
+                <td align="right">10.8</td>
+                </tr>
+                <tr>
+                <td align="right">3355672</td>
+                <td>Luderitz</td>
+                <td>0.00%</td>
+                <td>Na</td>
+                <td>83.00%</td>
+                <td align="right">-26.6481</td>
+                <td align="right">56.5</td>
+                <td align="right">7.23</td>
+                </tr>
+                <tr>
+                <td align="right">3520271</td>
+                <td>Nuevo Progreso</td>
+                <td>8.00%</td>
+                <td>Us</td>
+                <td>58.00%</td>
+                <td align="right">26.0544</td>
+                <td align="right">82.27</td>
+                <td align="right">24.45</td>
+                </tr>
+                <tr>
+                <td align="right">2377457</td>
+                <td>Nouadhibou</td>
+                <td>24.00%</td>
+                <td>Mr</td>
+                <td>63.00%</td>
+                <td align="right">20.931</td>
+                <td align="right">62.92</td>
+                <td align="right">13.6</td>
+                </tr>
+                <tr>
+                <td align="right">5697939</td>
+                <td>North Platte</td>
+                <td>12.00%</td>
+                <td>Us</td>
+                <td>71.00%</td>
+                <td align="right">41.1239</td>
+                <td align="right">47.32</td>
+                <td align="right">8.34</td>
+                </tr>
+                <tr>
+                <td align="right">2267254</td>
+                <td>Lagoa</td>
+                <td>0.00%</td>
+                <td>Pt</td>
+                <td>80.00%</td>
+                <td align="right">37.1363</td>
+                <td align="right">50.61</td>
+                <td align="right">5.99</td>
+                </tr>
+                <tr>
+                <td align="right">1266668</td>
+                <td>Khonsa</td>
+                <td>92.00%</td>
+                <td>In</td>
+                <td>98.00%</td>
+                <td align="right">26.991</td>
+                <td align="right">59.32</td>
+                <td align="right">1.63</td>
+                </tr>
+                <tr>
+                <td align="right">3366880</td>
+                <td>Hermanus</td>
+                <td>0.00%</td>
+                <td>Za</td>
+                <td>95.00%</td>
+                <td align="right">-34.4176</td>
+                <td align="right">41.4</td>
+                <td align="right">3.53</td>
+                </tr>
+                <tr>
+                <td align="right">5852602</td>
+                <td>Princeville</td>
+                <td>0.00%</td>
+                <td>Us</td>
+                <td>78.00%</td>
+                <td align="right">22.2236</td>
+                <td align="right">78.04</td>
+                <td align="right">5.66</td>
+                </tr>
+                <tr>
+                <td align="right">921889</td>
+                <td>Fomboni</td>
+                <td>36.00%</td>
+                <td>Km</td>
+                <td>100.00%</td>
+                <td align="right">-12.28</td>
+                <td align="right">81.93</td>
+                <td align="right">0.74</td>
+                </tr>
+                <tr>
+                <td align="right">3141866</td>
+                <td>Rindal</td>
+                <td>0.00%</td>
+                <td>No</td>
+                <td>74.00%</td>
+                <td align="right">63.0548</td>
+                <td align="right">6.53</td>
+                <td align="right">3.53</td>
+                </tr>
+                <tr>
+                <td align="right">3991347</td>
+                <td>Puerto Penasco</td>
+                <td>0.00%</td>
+                <td>Mx</td>
+                <td>81.00%</td>
+                <td align="right">31.3167</td>
+                <td align="right">65.16</td>
+                <td align="right">12.59</td>
+                </tr>
+                <tr>
+                <td align="right">934322</td>
+                <td>Mahebourg</td>
+                <td>64.00%</td>
+                <td>Mu</td>
+                <td>83.00%</td>
+                <td align="right">-20.4081</td>
+                <td align="right">76.15</td>
+                <td align="right">5.77</td>
+                </tr>
+                <tr>
+                <td align="right">1510689</td>
+                <td>Baykit</td>
+                <td>48.00%</td>
+                <td>Ru</td>
+                <td>61.00%</td>
+                <td align="right">61.6784</td>
+                <td align="right">7.2</td>
+                <td align="right">3.87</td>
+                </tr>
+                <tr>
+                <td align="right">2013442</td>
+                <td>Vershino-darasunskiy</td>
+                <td>92.00%</td>
+                <td>Ru</td>
+                <td>92.00%</td>
+                <td align="right">52.35</td>
+                <td align="right">41.0</td>
+                <td align="right">3.53</td>
+                </tr>
+                <tr>
+                <td align="right">2136697</td>
+                <td>Lakatoro</td>
+                <td>64.00%</td>
+                <td>Vu</td>
+                <td>89.00%</td>
+                <td align="right">-16.1069</td>
+                <td align="right">85.91</td>
+                <td align="right">3.2</td>
+                </tr>
+                <tr>
+                <td align="right">3443061</td>
+                <td>Chuy</td>
+                <td>0.00%</td>
+                <td>Uy</td>
+                <td>87.00%</td>
+                <td align="right">-33.6938</td>
+                <td align="right">53.69</td>
+                <td align="right">8.57</td>
+                </tr>
+                <tr>
+                <td align="right">1214488</td>
+                <td>Meulaboh</td>
+                <td>20.00%</td>
+                <td>Id</td>
+                <td>100.00%</td>
+                <td align="right">4.1363</td>
+                <td align="right">77.29</td>
+                <td align="right">4.43</td>
+                </tr>
+                <tr>
+                <td align="right">2038300</td>
+                <td>Benxi</td>
+                <td>8.00%</td>
+                <td>Cn</td>
+                <td>54.00%</td>
+                <td align="right">41.2922</td>
+                <td align="right">52.2</td>
+                <td align="right">11.81</td>
+                </tr>
+                <tr>
+                <td align="right">1734586</td>
+                <td>Simpang</td>
+                <td>32.00%</td>
+                <td>My</td>
+                <td>100.00%</td>
+                <td align="right">4.8185</td>
+                <td align="right">75.0</td>
+                <td align="right">4.76</td>
+                </tr>
+                <tr>
+                <td align="right">3102459</td>
+                <td>Brzeg</td>
+                <td>92.00%</td>
+                <td>Pl</td>
+                <td>95.00%</td>
+                <td align="right">50.8615</td>
+                <td align="right">38.95</td>
+                <td align="right">7.78</td>
+                </tr>
+                <tr>
+                <td align="right">779554</td>
+                <td>Honningsvag</td>
+                <td>80.00%</td>
+                <td>No</td>
+                <td>100.00%</td>
+                <td align="right">70.9821</td>
+                <td align="right">26.47</td>
+                <td align="right">19.42</td>
+                </tr>
+                <tr>
+                <td align="right">1736356</td>
+                <td>Tumpat</td>
+                <td>80.00%</td>
+                <td>My</td>
+                <td>93.00%</td>
+                <td align="right">6.1984</td>
+                <td align="right">75.65</td>
+                <td align="right">3.31</td>
+                </tr>
+                <tr>
+                <td align="right">3437029</td>
+                <td>San Patricio</td>
+                <td>0.00%</td>
+                <td>Py</td>
+                <td>71.00%</td>
+                <td align="right">-26.9767</td>
+                <td align="right">56.93</td>
+                <td align="right">4.09</td>
+                </tr>
+                <tr>
+                <td align="right">3728097</td>
+                <td>Les Cayes</td>
+                <td>0.00%</td>
+                <td>Ht</td>
+                <td>100.00%</td>
+                <td align="right">18.1944</td>
+                <td align="right">79.23</td>
+                <td align="right">4.76</td>
+                </tr>
+                <tr>
+                <td align="right">2092164</td>
+                <td>Lorengau</td>
+                <td>44.00%</td>
+                <td>Pg</td>
+                <td>98.00%</td>
+                <td align="right">-2.0226</td>
+                <td align="right">83.53</td>
+                <td align="right">8.46</td>
+                </tr>
+                <tr>
+                <td align="right">1507745</td>
+                <td>Choya</td>
+                <td>80.00%</td>
+                <td>Ru</td>
+                <td>90.00%</td>
+                <td align="right">52.0053</td>
+                <td align="right">23.68</td>
+                <td align="right">2.19</td>
+                </tr>
+                <tr>
+                <td align="right">4020109</td>
+                <td>Atuona</td>
+                <td>88.00%</td>
+                <td>Pf</td>
+                <td>100.00%</td>
+                <td align="right">-9.8</td>
+                <td align="right">77.67</td>
+                <td align="right">15.28</td>
+                </tr>
+                <tr>
+                <td align="right">3650121</td>
+                <td>Olinda</td>
+                <td>88.00%</td>
+                <td>Ec</td>
+                <td>78.00%</td>
+                <td align="right">-2.0334</td>
+                <td align="right">81.97</td>
+                <td align="right">2.75</td>
+                </tr>
+                <tr>
+                <td align="right">2034754</td>
+                <td>Shunyi</td>
+                <td>0.00%</td>
+                <td>Cn</td>
+                <td>60.00%</td>
+                <td align="right">40.1294</td>
+                <td align="right">60.15</td>
+                <td align="right">3.2</td>
+                </tr>
+                <tr>
+                <td align="right">863061</td>
+                <td>Usinsk</td>
+                <td>64.00%</td>
+                <td>Ru</td>
+                <td>79.00%</td>
+                <td align="right">65.9957</td>
+                <td align="right">-1.81</td>
+                <td align="right">9.46</td>
+                </tr>
+                <tr>
+                <td align="right">3996322</td>
+                <td>Mazatlan</td>
+                <td>0.00%</td>
+                <td>Mx</td>
+                <td>53.00%</td>
+                <td align="right">23.2167</td>
+                <td align="right">77.16</td>
+                <td align="right">3.76</td>
+                </tr>
+                <tr>
+                <td align="right">2108502</td>
+                <td>Honiara</td>
+                <td>64.00%</td>
+                <td>Sb</td>
+                <td>90.00%</td>
+                <td align="right">-9.4313</td>
+                <td align="right">86.14</td>
+                <td align="right">2.86</td>
+                </tr>
+                <tr>
+                <td align="right">3843123</td>
+                <td>Neuquen</td>
+                <td>0.00%</td>
+                <td>Ar</td>
+                <td>30.00%</td>
+                <td align="right">-38.9517</td>
+                <td align="right">63.37</td>
+                <td align="right">8.46</td>
+                </tr>
+                <tr>
+                <td align="right">3170094</td>
+                <td>Portoferraio</td>
+                <td>0.00%</td>
+                <td>It</td>
+                <td>100.00%</td>
+                <td align="right">42.8115</td>
+                <td align="right">46.44</td>
+                <td align="right">9.8</td>
+                </tr>
+                <tr>
+                <td align="right">3833062</td>
+                <td>Venado Tuerto</td>
+                <td>32.00%</td>
+                <td>Ar</td>
+                <td>53.00%</td>
+                <td align="right">-33.7455</td>
+                <td align="right">50.61</td>
+                <td align="right">7.11</td>
+                </tr>
+                <tr>
+                <td align="right">5949493</td>
+                <td>Espanola</td>
+                <td>12.00%</td>
+                <td>Ca</td>
+                <td>56.00%</td>
+                <td align="right">46.2653</td>
+                <td align="right">34.02</td>
+                <td align="right">10.47</td>
+                </tr>
+                <tr>
+                <td align="right">5681948</td>
+                <td>Fallon</td>
+                <td>0.00%</td>
+                <td>Us</td>
+                <td>67.00%</td>
+                <td align="right">46.8369</td>
+                <td align="right">44.55</td>
+                <td align="right">9.24</td>
+                </tr>
+                <tr>
+                <td align="right">5849996</td>
+                <td>Lahaina</td>
+                <td>8.00%</td>
+                <td>Us</td>
+                <td>79.00%</td>
+                <td align="right">20.8727</td>
+                <td align="right">78.75</td>
+                <td align="right">9.8</td>
+                </tr>
+                <tr>
+                <td align="right">694919</td>
+                <td>Sakhnovshchyna</td>
+                <td>92.00%</td>
+                <td>Ua</td>
+                <td>95.00%</td>
+                <td align="right">49.1517</td>
+                <td align="right">40.91</td>
+                <td align="right">9.01</td>
+                </tr>
+                <tr>
+                <td align="right">2019309</td>
+                <td>Neryungri</td>
+                <td>0.00%</td>
+                <td>Ru</td>
+                <td>66.00%</td>
+                <td align="right">56.658</td>
+                <td align="right">25.12</td>
+                <td align="right">5.88</td>
+                </tr>
+                <tr>
+                <td align="right">5746545</td>
+                <td>Portland</td>
+                <td>92.00%</td>
+                <td>Us</td>
+                <td>100.00%</td>
+                <td align="right">45.5202</td>
+                <td align="right">48.56</td>
+                <td align="right">4.65</td>
+                </tr>
+                <tr>
+                <td align="right">1131462</td>
+                <td>Uruzgan</td>
+                <td>20.00%</td>
+                <td>Af</td>
+                <td>64.00%</td>
+                <td align="right">32.9278</td>
+                <td align="right">27.45</td>
+                <td align="right">1.74</td>
+                </tr>
+                <tr>
+                <td align="right">2686469</td>
+                <td>Ornskoldsvik</td>
+                <td>0.00%</td>
+                <td>Se</td>
+                <td>100.00%</td>
+                <td align="right">63.2909</td>
+                <td align="right">9.48</td>
+                <td align="right">9.01</td>
+                </tr>
+                <tr>
+                <td align="right">2640006</td>
+                <td>Portree</td>
+                <td>92.00%</td>
+                <td>Gb</td>
+                <td>100.00%</td>
+                <td align="right">57.4129</td>
+                <td align="right">39.27</td>
+                <td align="right">17.63</td>
+                </tr>
+                <tr>
+                <td align="right">3844421</td>
+                <td>Russell</td>
+                <td>0.00%</td>
+                <td>Ar</td>
+                <td>64.00%</td>
+                <td align="right">-33.0055</td>
+                <td align="right">55.89</td>
+                <td align="right">2.3</td>
+                </tr>
+                <tr>
+                <td align="right">1296736</td>
+                <td>Shwebo</td>
+                <td>76.00%</td>
+                <td>Mm</td>
+                <td>88.00%</td>
+                <td align="right">22.5667</td>
+                <td align="right">70.81</td>
+                <td align="right">8.57</td>
+                </tr>
+                <tr>
+                <td align="right">72181</td>
+                <td>Marzuq</td>
+                <td>0.00%</td>
+                <td>Ye</td>
+                <td>87.00%</td>
+                <td align="right">14.4</td>
+                <td align="right">41.34</td>
+                <td align="right">2.19</td>
+                </tr>
+                <tr>
+                <td align="right">6620339</td>
+                <td>Karratha</td>
+                <td>0.00%</td>
+                <td>Au</td>
+                <td>52.00%</td>
+                <td align="right">-20.7371</td>
+                <td align="right">89.76</td>
+                <td align="right">5.21</td>
+                </tr>
+                <tr>
+                <td align="right">3374210</td>
+                <td>Sao Filipe</td>
+                <td>0.00%</td>
+                <td>Cv</td>
+                <td>97.00%</td>
+                <td align="right">14.8961</td>
+                <td align="right">69.48</td>
+                <td align="right">15.39</td>
+                </tr>
+                <tr>
+                <td align="right">2027109</td>
+                <td>Barguzin</td>
+                <td>68.00%</td>
+                <td>Ru</td>
+                <td>88.00%</td>
+                <td align="right">53.6176</td>
+                <td align="right">20.21</td>
+                <td align="right">5.44</td>
+                </tr>
+                <tr>
+                <td align="right">3664956</td>
+                <td>Boca Do Acre</td>
+                <td>64.00%</td>
+                <td>Br</td>
+                <td>78.00%</td>
+                <td align="right">-8.7554</td>
+                <td align="right">73.87</td>
+                <td align="right">3.65</td>
+                </tr>
+                <tr>
+                <td align="right">2021188</td>
+                <td>Kurumkan</td>
+                <td>8.00%</td>
+                <td>Ru</td>
+                <td>88.00%</td>
+                <td align="right">54.3263</td>
+                <td align="right">16.43</td>
+                <td align="right">2.53</td>
+                </tr>
+                <tr>
+                <td align="right">3567546</td>
+                <td>Bejucal</td>
+                <td>0.00%</td>
+                <td>Cu</td>
+                <td>49.00%</td>
+                <td align="right">22.9281</td>
+                <td align="right">73.17</td>
+                <td align="right">12.82</td>
+                </tr>
+                <tr>
+                <td align="right">3389822</td>
+                <td>Salinopolis</td>
+                <td>100.00%</td>
+                <td>Br</td>
+                <td>100.00%</td>
+                <td align="right">-0.6137</td>
+                <td align="right">80.51</td>
+                <td align="right">8.23</td>
+                </tr>
+                <tr>
+                <td align="right">6941099</td>
+                <td>Mahendranagar</td>
+                <td>0.00%</td>
+                <td>In</td>
+                <td>37.00%</td>
+                <td align="right">28.0229</td>
+                <td align="right">60.13</td>
+                <td align="right">3.2</td>
+                </tr>
+                <tr>
+                <td align="right">1082243</td>
+                <td>Ambilobe</td>
+                <td>12.00%</td>
+                <td>Mg</td>
+                <td>99.00%</td>
+                <td align="right">-13.1945</td>
+                <td align="right">69.85</td>
+                <td align="right">2.98</td>
+                </tr>
+                <tr>
+                <td align="right">2447513</td>
+                <td>Arlit</td>
+                <td>0.00%</td>
+                <td>Ne</td>
+                <td>31.00%</td>
+                <td align="right">18.7391</td>
+                <td align="right">56.03</td>
+                <td align="right">4.09</td>
+                </tr>
+                <tr>
+                <td align="right">3378644</td>
+                <td>Georgetown</td>
+                <td>88.00%</td>
+                <td>Gy</td>
+                <td>77.00%</td>
+                <td align="right">6.8026</td>
+                <td align="right">78.35</td>
+                <td align="right">7.45</td>
+                </tr>
+                <tr>
+                <td align="right">2542997</td>
+                <td>Marrakesh</td>
+                <td>0.00%</td>
+                <td>Ma</td>
+                <td>54.00%</td>
+                <td align="right">31.626</td>
+                <td align="right">52.65</td>
+                <td align="right">6.44</td>
+                </tr>
+                <tr>
+                <td align="right">3833367</td>
+                <td>Ushuaia</td>
+                <td>0.00%</td>
+                <td>Ar</td>
+                <td>94.00%</td>
+                <td align="right">-54.807</td>
+                <td align="right">44.38</td>
+                <td align="right">19.53</td>
+                </tr>
+                <tr>
+                <td align="right">1242110</td>
+                <td>Kalmunai</td>
+                <td>44.00%</td>
+                <td>Lk</td>
+                <td>99.00%</td>
+                <td align="right">7.4167</td>
+                <td align="right">71.58</td>
+                <td align="right">2.75</td>
+                </tr>
+                <tr>
+                <td align="right">526296</td>
+                <td>Mirskoy</td>
+                <td>80.00%</td>
+                <td>Ru</td>
+                <td>92.00%</td>
+                <td align="right">45.5427</td>
+                <td align="right">40.19</td>
+                <td align="right">6.78</td>
+                </tr>
+                <tr>
+                <td align="right">1106677</td>
+                <td>Bambous Virieux</td>
+                <td>64.00%</td>
+                <td>Mu</td>
+                <td>83.00%</td>
+                <td align="right">-20.3428</td>
+                <td align="right">76.15</td>
+                <td align="right">5.77</td>
+                </tr>
+                <tr>
+                <td align="right">5742974</td>
+                <td>North Bend</td>
+                <td>88.00%</td>
+                <td>Us</td>
+                <td>92.00%</td>
+                <td align="right">43.4065</td>
+                <td align="right">49.64</td>
+                <td align="right">3.31</td>
+                </tr>
+                <tr>
+                <td align="right">2013399</td>
+                <td>Vikhorevka</td>
+                <td>76.00%</td>
+                <td>Ru</td>
+                <td>81.00%</td>
+                <td align="right">56.1247</td>
+                <td align="right">20.89</td>
+                <td align="right">4.32</td>
+                </tr>
+                <tr>
+                <td align="right">3440714</td>
+                <td>Salto</td>
+                <td>0.00%</td>
+                <td>Uy</td>
+                <td>72.00%</td>
+                <td align="right">-31.3889</td>
+                <td align="right">52.11</td>
+                <td align="right">9.35</td>
+                </tr>
+                <tr>
+                <td align="right">1628884</td>
+                <td>Sampit</td>
+                <td>44.00%</td>
+                <td>Id</td>
+                <td>98.00%</td>
+                <td align="right">-2.539</td>
+                <td align="right">78.75</td>
+                <td align="right">4.54</td>
+                </tr>
+                <tr>
+                <td align="right">5931074</td>
+                <td>Cowansville</td>
+                <td>0.00%</td>
+                <td>Ca</td>
+                <td>65.00%</td>
+                <td align="right">45.2089</td>
+                <td align="right">28.31</td>
+                <td align="right">1.19</td>
+                </tr>
+                <tr>
+                <td align="right">5469841</td>
+                <td>Grants</td>
+                <td>92.00%</td>
+                <td>Us</td>
+                <td>26.00%</td>
+                <td align="right">35.1473</td>
+                <td align="right">47.84</td>
+                <td align="right">6.67</td>
+                </tr>
+                <tr>
+                <td align="right">3676604</td>
+                <td>Rosarito</td>
+                <td>20.00%</td>
+                <td>Co</td>
+                <td>89.00%</td>
+                <td align="right">4.9051</td>
+                <td align="right">73.81</td>
+                <td align="right">1.63</td>
+                </tr>
+                <tr>
+                <td align="right">4568138</td>
+                <td>San Juan</td>
+                <td>76.00%</td>
+                <td>Pr</td>
+                <td>100.00%</td>
+                <td align="right">18.4653</td>
+                <td align="right">78.76</td>
+                <td align="right">10.25</td>
+                </tr>
+                <tr>
+                <td align="right">5543462</td>
+                <td>Moroni</td>
+                <td>56.00%</td>
+                <td>Us</td>
+                <td>40.00%</td>
+                <td align="right">39.525</td>
+                <td align="right">31.59</td>
+                <td align="right">3.76</td>
+                </tr>
+                <tr>
+                <td align="right">1028434</td>
+                <td>Quelimane</td>
+                <td>0.00%</td>
+                <td>Mz</td>
+                <td>94.00%</td>
+                <td align="right">-17.8776</td>
+                <td align="right">79.05</td>
+                <td align="right">5.44</td>
+                </tr>
+                <tr>
+                <td align="right">3471451</td>
+                <td>Arraial Do Cabo</td>
+                <td>32.00%</td>
+                <td>Br</td>
+                <td>86.00%</td>
+                <td align="right">-22.9663</td>
+                <td align="right">78.17</td>
+                <td align="right">19.08</td>
+                </tr>
+                <tr>
+                <td align="right">2239862</td>
+                <td>Malanje</td>
+                <td>20.00%</td>
+                <td>Ao</td>
+                <td>98.00%</td>
+                <td align="right">-9.5439</td>
+                <td align="right">63.45</td>
+                <td align="right">2.19</td>
+                </tr>
+                <tr>
+                <td align="right">3407882</td>
+                <td>Altamira</td>
+                <td>48.00%</td>
+                <td>Br</td>
+                <td>90.00%</td>
+                <td align="right">-3.2041</td>
+                <td align="right">71.71</td>
+                <td align="right">3.53</td>
+                </tr>
+                <tr>
+                <td align="right">1507116</td>
+                <td>Dudinka</td>
+                <td>64.00%</td>
+                <td>Ru</td>
+                <td>53.00%</td>
+                <td align="right">69.4061</td>
+                <td align="right">-8.49</td>
+                <td align="right">6.78</td>
+                </tr>
+                <tr>
+                <td align="right">2123814</td>
+                <td>Leningradskiy</td>
+                <td>92.00%</td>
+                <td>Ru</td>
+                <td>100.00%</td>
+                <td align="right">69.3833</td>
+                <td align="right">-0.51</td>
+                <td align="right">19.53</td>
+                </tr>
+                <tr>
+                <td align="right">1507390</td>
+                <td>Dikson</td>
+                <td>24.00%</td>
+                <td>Ru</td>
+                <td>95.00%</td>
+                <td align="right">73.5069</td>
+                <td align="right">-16.32</td>
+                <td align="right">3.31</td>
+                </tr>
+                <tr>
+                <td align="right">1689431</td>
+                <td>San Jose</td>
+                <td>8.00%</td>
+                <td>Ph</td>
+                <td>72.00%</td>
+                <td align="right">15.7917</td>
+                <td align="right">80.82</td>
+                <td align="right">2.42</td>
+                </tr>
+                <tr>
+                <td align="right">3573374</td>
+                <td>The Valley</td>
+                <td>68.00%</td>
+                <td>Ai</td>
+                <td>99.00%</td>
+                <td align="right">18.217</td>
+                <td align="right">78.26</td>
+                <td align="right">8.23</td>
+                </tr>
+                <tr>
+                <td align="right">1283285</td>
+                <td>Jumla</td>
+                <td>0.00%</td>
+                <td>Np</td>
+                <td>82.00%</td>
+                <td align="right">29.2754</td>
+                <td align="right">13.59</td>
+                <td align="right">1.74</td>
+                </tr>
+                <tr>
+                <td align="right">3423146</td>
+                <td>Ilulissat</td>
+                <td>20.00%</td>
+                <td>Gl</td>
+                <td>76.00%</td>
+                <td align="right">69.2167</td>
+                <td align="right">-15.31</td>
+                <td align="right">3.09</td>
+                </tr>
+                <tr>
+                <td align="right">1641899</td>
+                <td>Labuhan</td>
+                <td>68.00%</td>
+                <td>Id</td>
+                <td>96.00%</td>
+                <td align="right">-2.5409</td>
+                <td align="right">76.01</td>
+                <td align="right">2.98</td>
+                </tr>
+                <tr>
+                <td align="right">1494482</td>
+                <td>Polunochnoye</td>
+                <td>0.00%</td>
+                <td>Ru</td>
+                <td>68.00%</td>
+                <td align="right">60.8693</td>
+                <td align="right">7.23</td>
+                <td align="right">8.68</td>
+                </tr>
+                <tr>
+                <td align="right">2508813</td>
+                <td>Adrar</td>
+                <td>0.00%</td>
+                <td>Dz</td>
+                <td>28.00%</td>
+                <td align="right">27.8734</td>
+                <td align="right">57.45</td>
+                <td align="right">16.06</td>
+                </tr>
+                <tr>
+                <td align="right">4732862</td>
+                <td>Nome</td>
+                <td>44.00%</td>
+                <td>Us</td>
+                <td>71.00%</td>
+                <td align="right">30.0358</td>
+                <td align="right">73.36</td>
+                <td align="right">17.07</td>
+                </tr>
+                <tr>
+                <td align="right">2034340</td>
+                <td>Tumen</td>
+                <td>68.00%</td>
+                <td>Cn</td>
+                <td>56.00%</td>
+                <td align="right">42.9653</td>
+                <td align="right">62.26</td>
+                <td align="right">5.55</td>
+                </tr>
+                <tr>
+                <td align="right">2063036</td>
+                <td>Port Lincoln</td>
+                <td>56.00%</td>
+                <td>Au</td>
+                <td>87.00%</td>
+                <td align="right">-34.7212</td>
+                <td align="right">68.27</td>
+                <td align="right">19.08</td>
+                </tr>
+                <tr>
+                <td align="right">3671549</td>
+                <td>Puerto Asis</td>
+                <td>56.00%</td>
+                <td>Co</td>
+                <td>88.00%</td>
+                <td align="right">0.5133</td>
+                <td align="right">72.93</td>
+                <td align="right">1.97</td>
+                </tr>
+                <tr>
+                <td align="right">6162949</td>
+                <td>Terrace</td>
+                <td>92.00%</td>
+                <td>Ca</td>
+                <td>80.00%</td>
+                <td align="right">54.5211</td>
+                <td align="right">35.06</td>
+                <td align="right">2.19</td>
+                </tr>
+                <tr>
+                <td align="right">57000</td>
+                <td>Hobyo</td>
+                <td>88.00%</td>
+                <td>So</td>
+                <td>84.00%</td>
+                <td align="right">5.3505</td>
+                <td align="right">80.83</td>
+                <td align="right">16.17</td>
+                </tr>
+                <tr>
+                <td align="right">2647074</td>
+                <td>Hereford</td>
+                <td>92.00%</td>
+                <td>Gb</td>
+                <td>98.00%</td>
+                <td align="right">52.0554</td>
+                <td align="right">39.94</td>
+                <td align="right">12.48</td>
+                </tr>
+                <tr>
+                <td align="right">2249901</td>
+                <td>Gat</td>
+                <td>88.00%</td>
+                <td>Sn</td>
+                <td>34.00%</td>
+                <td align="right">14.6934</td>
+                <td align="right">74.62</td>
+                <td align="right">10.58</td>
+                </tr>
+                <tr>
+                <td align="right">4551177</td>
+                <td>Shawnee</td>
+                <td>88.00%</td>
+                <td>Us</td>
+                <td>64.00%</td>
+                <td align="right">35.3273</td>
+                <td align="right">59.22</td>
+                <td align="right">17.18</td>
+                </tr>
+                <tr>
+                <td align="right">1497397</td>
+                <td>Nizhnyaya Poyma</td>
+                <td>64.00%</td>
+                <td>Ru</td>
+                <td>83.00%</td>
+                <td align="right">56.1631</td>
+                <td align="right">18.12</td>
+                <td align="right">4.99</td>
+                </tr>
+                <tr>
+                <td align="right">3141310</td>
+                <td>Rorvik</td>
+                <td>48.00%</td>
+                <td>No</td>
+                <td>100.00%</td>
+                <td align="right">64.8621</td>
+                <td align="right">30.11</td>
+                <td align="right">2.98</td>
+                </tr>
+                <tr>
+                <td align="right">2094342</td>
+                <td>Kavieng</td>
+                <td>20.00%</td>
+                <td>Pg</td>
+                <td>96.00%</td>
+                <td align="right">-2.5745</td>
+                <td align="right">86.72</td>
+                <td align="right">6.22</td>
+                </tr>
+                <tr>
+                <td align="right">5061221</td>
+                <td>Rugby</td>
+                <td>64.00%</td>
+                <td>Us</td>
+                <td>97.00%</td>
+                <td align="right">48.3689</td>
+                <td align="right">33.53</td>
+                <td align="right">3.31</td>
+                </tr>
+                <tr>
+                <td align="right">2067089</td>
+                <td>Maningrida</td>
+                <td>0.00%</td>
+                <td>Au</td>
+                <td>100.00%</td>
+                <td align="right">-12.0525</td>
+                <td align="right">84.11</td>
+                <td align="right">3.87</td>
+                </tr>
+                <tr>
+                <td align="right">4642938</td>
+                <td>Morristown</td>
+                <td>12.00%</td>
+                <td>Us</td>
+                <td>64.00%</td>
+                <td align="right">36.214</td>
+                <td align="right">53.2</td>
+                <td align="right">4.99</td>
+                </tr>
+                <tr>
+                <td align="right">3831208</td>
+                <td>Qaanaaq</td>
+                <td>12.00%</td>
+                <td>Gl</td>
+                <td>85.00%</td>
+                <td align="right">77.484</td>
+                <td align="right">-22.09</td>
+                <td align="right">5.66</td>
+                </tr>
+                <tr>
+                <td align="right">1691355</td>
+                <td>Sabang</td>
+                <td>88.00%</td>
+                <td>Ph</td>
+                <td>100.00%</td>
+                <td align="right">13.7234</td>
+                <td align="right">76.39</td>
+                <td align="right">12.82</td>
+                </tr>
+                <tr>
+                <td align="right">3981391</td>
+                <td>Tomatlan</td>
+                <td>0.00%</td>
+                <td>Mx</td>
+                <td>50.00%</td>
+                <td align="right">19.9333</td>
+                <td align="right">77.83</td>
+                <td align="right">4.65</td>
+                </tr>
+                <tr>
+                <td align="right">2120047</td>
+                <td>Ust-omchug</td>
+                <td>80.00%</td>
+                <td>Ru</td>
+                <td>76.00%</td>
+                <td align="right">61.1332</td>
+                <td align="right">20.44</td>
+                <td align="right">3.53</td>
+                </tr>
+                <tr>
+                <td align="right">4033557</td>
+                <td>Tautira</td>
+                <td>48.00%</td>
+                <td>Pf</td>
+                <td>99.00%</td>
+                <td align="right">-17.7334</td>
+                <td align="right">87.21</td>
+                <td align="right">15.73</td>
+                </tr>
+                <tr>
+                <td align="right">1248991</td>
+                <td>Colombo</td>
+                <td>48.00%</td>
+                <td>Lk</td>
+                <td>100.00%</td>
+                <td align="right">6.935</td>
+                <td align="right">76.48</td>
+                <td align="right">2.64</td>
+                </tr>
+                <tr>
+                <td align="right">6094817</td>
+                <td>Ottawa</td>
+                <td>0.00%</td>
+                <td>Ca</td>
+                <td>65.00%</td>
+                <td align="right">45.4211</td>
+                <td align="right">29.89</td>
+                <td align="right">4.65</td>
+                </tr>
+                <tr>
+                <td align="right">2214846</td>
+                <td>Misratah</td>
+                <td>48.00%</td>
+                <td>Ly</td>
+                <td>96.00%</td>
+                <td align="right">32.3754</td>
+                <td align="right">57.06</td>
+                <td align="right">10.8</td>
+                </tr>
+                <tr>
+                <td align="right">1684245</td>
+                <td>Tagusao</td>
+                <td>8.00%</td>
+                <td>Ph</td>
+                <td>89.00%</td>
+                <td align="right">9.1924</td>
+                <td align="right">82.27</td>
+                <td align="right">5.44</td>
+                </tr>
+                <tr>
+                <td align="right">2122293</td>
+                <td>Ozernovskiy</td>
+                <td>44.00%</td>
+                <td>Ru</td>
+                <td>100.00%</td>
+                <td align="right">51.5</td>
+                <td align="right">36.45</td>
+                <td align="right">4.09</td>
+                </tr>
+                <tr>
+                <td align="right">1714733</td>
+                <td>Dingle</td>
+                <td>8.00%</td>
+                <td>Ph</td>
+                <td>67.00%</td>
+                <td align="right">11.0001</td>
+                <td align="right">83.73</td>
+                <td align="right">10.02</td>
+                </tr>
+                <tr>
+                <td align="right">4034496</td>
+                <td>Fare</td>
+                <td>88.00%</td>
+                <td>Pf</td>
+                <td>96.00%</td>
+                <td align="right">-16.7001</td>
+                <td align="right">83.3</td>
+                <td align="right">17.07</td>
+                </tr>
+                <tr>
+                <td align="right">3690608</td>
+                <td>Zorritos</td>
+                <td>68.00%</td>
+                <td>Pe</td>
+                <td>79.00%</td>
+                <td align="right">-3.6805</td>
+                <td align="right">76.91</td>
+                <td align="right">4.99</td>
+                </tr>
+                <tr>
+                <td align="right">3664716</td>
+                <td>Canutama</td>
+                <td>32.00%</td>
+                <td>Br</td>
+                <td>81.00%</td>
+                <td align="right">-6.5331</td>
+                <td align="right">77.02</td>
+                <td align="right">4.43</td>
+                </tr>
+                <tr>
+                <td align="right">1580410</td>
+                <td>Hong Gai</td>
+                <td>44.00%</td>
+                <td>Vn</td>
+                <td>90.00%</td>
+                <td align="right">20.956</td>
+                <td align="right">70.99</td>
+                <td align="right">4.21</td>
+                </tr>
+                <tr>
+                <td align="right">2178753</td>
+                <td>Kirakira</td>
+                <td>64.00%</td>
+                <td>Sb</td>
+                <td>100.00%</td>
+                <td align="right">-10.4569</td>
+                <td align="right">83.44</td>
+                <td align="right">10.47</td>
+                </tr>
+                <tr>
+                <td align="right">2069194</td>
+                <td>Jamestown</td>
+                <td>0.00%</td>
+                <td>Au</td>
+                <td>57.00%</td>
+                <td align="right">-33.2075</td>
+                <td align="right">69.82</td>
+                <td align="right">11.03</td>
+                </tr>
+                <tr>
+                <td align="right">2179103</td>
+                <td>Whitianga</td>
+                <td>0.00%</td>
+                <td>Nz</td>
+                <td>99.00%</td>
+                <td align="right">-36.8332</td>
+                <td align="right">69.71</td>
+                <td align="right">11.81</td>
+                </tr>
+                <tr>
+                <td align="right">2701713</td>
+                <td>Karlskrona</td>
+                <td>92.00%</td>
+                <td>Se</td>
+                <td>80.00%</td>
+                <td align="right">56.1621</td>
+                <td align="right">27.55</td>
+                <td align="right">5.66</td>
+                </tr>
+                <tr>
+                <td align="right">34886</td>
+                <td>Sabya</td>
+                <td>0.00%</td>
+                <td>Ye</td>
+                <td>92.00%</td>
+                <td align="right">16.1858</td>
+                <td align="right">55.99</td>
+                <td align="right">0.63</td>
+                </tr>
+                <tr>
+                <td align="right">2127202</td>
+                <td>Anadyr</td>
+                <td>80.00%</td>
+                <td>Ru</td>
+                <td>100.00%</td>
+                <td align="right">64.7317</td>
+                <td align="right">4.12</td>
+                <td align="right">8.46</td>
+                </tr>
+                <tr>
+                <td align="right">544084</td>
+                <td>Koslan</td>
+                <td>0.00%</td>
+                <td>Ru</td>
+                <td>70.00%</td>
+                <td align="right">63.4564</td>
+                <td align="right">-3.88</td>
+                <td align="right">4.54</td>
+                </tr>
+                <tr>
+                <td align="right">2160063</td>
+                <td>Codrington</td>
+                <td>92.00%</td>
+                <td>Au</td>
+                <td>100.00%</td>
+                <td align="right">-28.9484</td>
+                <td align="right">70.32</td>
+                <td align="right">6.67</td>
+                </tr>
+                <tr>
+                <td align="right">2120048</td>
+                <td>Ust-nera</td>
+                <td>32.00%</td>
+                <td>Ru</td>
+                <td>77.00%</td>
+                <td align="right">64.5664</td>
+                <td align="right">13.41</td>
+                <td align="right">2.64</td>
+                </tr>
+                <tr>
+                <td align="right">2175403</td>
+                <td>Bluff</td>
+                <td>56.00%</td>
+                <td>Au</td>
+                <td>64.00%</td>
+                <td align="right">-23.58</td>
+                <td align="right">90.05</td>
+                <td align="right">8.01</td>
+                </tr>
+                <tr>
+                <td align="right">107304</td>
+                <td>Buraydah</td>
+                <td>0.00%</td>
+                <td>Sa</td>
+                <td>24.00%</td>
+                <td align="right">26.3317</td>
+                <td align="right">68.29</td>
+                <td align="right">3.98</td>
+                </tr>
+                <tr>
+                <td align="right">3855065</td>
+                <td>General Roca</td>
+                <td>0.00%</td>
+                <td>Ar</td>
+                <td>30.00%</td>
+                <td align="right">-39.0267</td>
+                <td align="right">63.37</td>
+                <td align="right">8.46</td>
+                </tr>
+                <tr>
+                <td align="right">2090021</td>
+                <td>Namatanai</td>
+                <td>32.00%</td>
+                <td>Pg</td>
+                <td>99.00%</td>
+                <td align="right">-3.6642</td>
+                <td align="right">85.33</td>
+                <td align="right">2.64</td>
+                </tr>
+                <tr>
+                <td align="right">1498161</td>
+                <td>Muzhi</td>
+                <td>68.00%</td>
+                <td>Ru</td>
+                <td>82.00%</td>
+                <td align="right">65.4</td>
+                <td align="right">4.12</td>
+                <td align="right">17.07</td>
+                </tr>
+                <tr>
+                <td align="right">2610343</td>
+                <td>Vestmanna</td>
+                <td>48.00%</td>
+                <td>Fo</td>
+                <td>100.00%</td>
+                <td align="right">62.1564</td>
+                <td align="right">38.03</td>
+                <td align="right">29.15</td>
+                </tr>
+                <tr>
+                <td align="right">6086673</td>
+                <td>Neepawa</td>
+                <td>68.00%</td>
+                <td>Ca</td>
+                <td>96.00%</td>
+                <td align="right">50.2319</td>
+                <td align="right">31.32</td>
+                <td align="right">5.99</td>
+                </tr>
+                <tr>
+                <td align="right">2396518</td>
+                <td>Port-gentil</td>
+                <td>56.00%</td>
+                <td>Ga</td>
+                <td>100.00%</td>
+                <td align="right">-0.7194</td>
+                <td align="right">82.11</td>
+                <td align="right">7.45</td>
+                </tr>
+                <tr>
+                <td align="right">2093846</td>
+                <td>Kiunga</td>
+                <td>12.00%</td>
+                <td>Pg</td>
+                <td>84.00%</td>
+                <td align="right">-6.116</td>
+                <td align="right">89.24</td>
+                <td align="right">2.64</td>
+                </tr>
+                <tr>
+                <td align="right">1267433</td>
+                <td>Kattivakkam</td>
+                <td>0.00%</td>
+                <td>In</td>
+                <td>100.00%</td>
+                <td align="right">13.2167</td>
+                <td align="right">78.12</td>
+                <td align="right">8.01</td>
+                </tr>
+                <tr>
+                <td align="right">292953</td>
+                <td>Manama</td>
+                <td>0.00%</td>
+                <td>Ae</td>
+                <td>53.00%</td>
+                <td align="right">25.3295</td>
+                <td align="right">66.94</td>
+                <td align="right">3.76</td>
+                </tr>
+                <tr>
+                <td align="right">2033536</td>
+                <td>Yakeshi</td>
+                <td>80.00%</td>
+                <td>Cn</td>
+                <td>51.00%</td>
+                <td align="right">49.2833</td>
+                <td align="right">51.35</td>
+                <td align="right">14.5</td>
+                </tr>
+                <tr>
+                <td align="right">3860443</td>
+                <td>Comodoro Rivadavia</td>
+                <td>92.00%</td>
+                <td>Ar</td>
+                <td>69.00%</td>
+                <td align="right">-45.8654</td>
+                <td align="right">68.23</td>
+                <td align="right">20.98</td>
+                </tr>
+                <tr>
+                <td align="right">7671223</td>
+                <td>Kloulklubed</td>
+                <td>0.00%</td>
+                <td>Pw</td>
+                <td>100.00%</td>
+                <td align="right">7.0419</td>
+                <td align="right">82.65</td>
+                <td align="right">20.2</td>
+                </tr>
+                <tr>
+                <td align="right">4671240</td>
+                <td>Estelle</td>
+                <td>68.00%</td>
+                <td>Us</td>
+                <td>59.00%</td>
+                <td align="right">32.8662</td>
+                <td align="right">79.57</td>
+                <td align="right">12.37</td>
+                </tr>
+                <tr>
+                <td align="right">103630</td>
+                <td>Najran</td>
+                <td>0.00%</td>
+                <td>Sa</td>
+                <td>58.00%</td>
+                <td align="right">17.544</td>
+                <td align="right">61.81</td>
+                <td align="right">3.2</td>
+                </tr>
+                <tr>
+                <td align="right">2455518</td>
+                <td>Kayes</td>
+                <td>44.00%</td>
+                <td>Ml</td>
+                <td>31.00%</td>
+                <td align="right">14.4434</td>
+                <td align="right">69.4</td>
+                <td align="right">7.56</td>
+                </tr>
+                <tr>
+                <td align="right">2082539</td>
+                <td>Merauke</td>
+                <td>68.00%</td>
+                <td>Id</td>
+                <td>94.00%</td>
+                <td align="right">-8.4903</td>
+                <td align="right">83.88</td>
+                <td align="right">14.16</td>
+                </tr>
+                <tr>
+                <td align="right">3622716</td>
+                <td>Nicoya</td>
+                <td>0.00%</td>
+                <td>Cr</td>
+                <td>38.00%</td>
+                <td align="right">10.147</td>
+                <td align="right">86.14</td>
+                <td align="right">13.71</td>
+                </tr>
+                <tr>
+                <td align="right">3137469</td>
+                <td>Sorland</td>
+                <td>88.00%</td>
+                <td>No</td>
+                <td>100.00%</td>
+                <td align="right">67.667</td>
+                <td align="right">36.27</td>
+                <td align="right">16.06</td>
+                </tr>
+                <tr>
+                <td align="right">4470244</td>
+                <td>Havelock</td>
+                <td>0.00%</td>
+                <td>Us</td>
+                <td>94.00%</td>
+                <td align="right">34.8785</td>
+                <td align="right">48.51</td>
+                <td align="right">15.28</td>
+                </tr>
+                <tr>
+                <td align="right">3899695</td>
+                <td>Ancud</td>
+                <td>92.00%</td>
+                <td>Cl</td>
+                <td>94.00%</td>
+                <td align="right">-41.8682</td>
+                <td align="right">53.24</td>
+                <td align="right">3.98</td>
+                </tr>
+                <tr>
+                <td align="right">1529651</td>
+                <td>Altay</td>
+                <td>64.00%</td>
+                <td>Cn</td>
+                <td>91.00%</td>
+                <td align="right">47.8258</td>
+                <td align="right">26.64</td>
+                <td align="right">4.43</td>
+                </tr>
+                <tr>
+                <td align="right">3374083</td>
+                <td>Bathsheba</td>
+                <td>32.00%</td>
+                <td>Bb</td>
+                <td>99.00%</td>
+                <td align="right">13.2167</td>
+                <td align="right">78.37</td>
+                <td align="right">13.82</td>
+                </tr>
+                <tr>
+                <td align="right">2021017</td>
+                <td>Kysyl-syr</td>
+                <td>56.00%</td>
+                <td>Ru</td>
+                <td>69.00%</td>
+                <td align="right">63.8986</td>
+                <td align="right">14.25</td>
+                <td align="right">9.8</td>
+                </tr>
+                <tr>
+                <td align="right">4276792</td>
+                <td>Oskaloosa</td>
+                <td>44.00%</td>
+                <td>Us</td>
+                <td>90.00%</td>
+                <td align="right">39.2153</td>
+                <td align="right">59.54</td>
+                <td align="right">15.73</td>
+                </tr>
+                <tr>
+                <td align="right">1685422</td>
+                <td>Sulangan</td>
+                <td>0.00%</td>
+                <td>Ph</td>
+                <td>100.00%</td>
+                <td align="right">11.1373</td>
+                <td align="right">79.75</td>
+                <td align="right">16.28</td>
+                </tr>
+                <tr>
+                <td align="right">6078372</td>
+                <td>Moose Factory</td>
+                <td>88.00%</td>
+                <td>Ca</td>
+                <td>83.00%</td>
+                <td align="right">51.2585</td>
+                <td align="right">36.34</td>
+                <td align="right">6.22</td>
+                </tr>
+                <tr>
+                <td align="right">2225940</td>
+                <td>Yatou</td>
+                <td>20.00%</td>
+                <td>Cm</td>
+                <td>100.00%</td>
+                <td align="right">3.6277</td>
+                <td align="right">77.94</td>
+                <td align="right">11.81</td>
+                </tr>
+                <tr>
+                <td align="right">3428576</td>
+                <td>San Pedro</td>
+                <td>36.00%</td>
+                <td>Ar</td>
+                <td>69.00%</td>
+                <td align="right">-33.6759</td>
+                <td align="right">53.56</td>
+                <td align="right">9.69</td>
+                </tr>
+                <tr>
+                <td align="right">3416888</td>
+                <td>Grindavik</td>
+                <td>92.00%</td>
+                <td>Is</td>
+                <td>100.00%</td>
+                <td align="right">63.8424</td>
+                <td align="right">38.7</td>
+                <td align="right">6.89</td>
+                </tr>
+                <tr>
+                <td align="right">1241622</td>
+                <td>Wattegama</td>
+                <td>48.00%</td>
+                <td>Lk</td>
+                <td>95.00%</td>
+                <td align="right">7.3513</td>
+                <td align="right">66.72</td>
+                <td align="right">2.75</td>
+                </tr>
+                <tr>
+                <td align="right">1056899</td>
+                <td>Sambava</td>
+                <td>44.00%</td>
+                <td>Mg</td>
+                <td>100.00%</td>
+                <td align="right">-14.2667</td>
+                <td align="right">78.12</td>
+                <td align="right">13.6</td>
+                </tr>
+                <tr>
+                <td align="right">1508501</td>
+                <td>Chadan</td>
+                <td>48.00%</td>
+                <td>Ru</td>
+                <td>73.00%</td>
+                <td align="right">51.286</td>
+                <td align="right">13.01</td>
+                <td align="right">2.64</td>
+                </tr>
+                <tr>
+                <td align="right">3026644</td>
+                <td>Souillac</td>
+                <td>64.00%</td>
+                <td>Fr</td>
+                <td>91.00%</td>
+                <td align="right">45.6006</td>
+                <td align="right">42.35</td>
+                <td align="right">5.77</td>
+                </tr>
+                <tr>
+                <td align="right">1014034</td>
+                <td>Carnarvon</td>
+                <td>0.00%</td>
+                <td>Za</td>
+                <td>32.00%</td>
+                <td align="right">-30.9678</td>
+                <td align="right">37.74</td>
+                <td align="right">3.65</td>
+                </tr>
+                <tr>
+                <td align="right">3896218</td>
+                <td>Castro</td>
+                <td>88.00%</td>
+                <td>Cl</td>
+                <td>93.00%</td>
+                <td align="right">-42.4824</td>
+                <td align="right">51.4</td>
+                <td align="right">3.53</td>
+                </tr>
+                <tr>
+                <td align="right">5071348</td>
+                <td>Kearney</td>
+                <td>80.00%</td>
+                <td>Us</td>
+                <td>100.00%</td>
+                <td align="right">40.6995</td>
+                <td align="right">42.22</td>
+                <td align="right">9.69</td>
+                </tr>
+                <tr>
+                <td align="right">2444219</td>
+                <td>Goure</td>
+                <td>0.00%</td>
+                <td>Ne</td>
+                <td>31.00%</td>
+                <td align="right">13.9835</td>
+                <td align="right">66.54</td>
+                <td align="right">5.88</td>
+                </tr>
+                <tr>
+                <td align="right">1636426</td>
+                <td>Manggar</td>
+                <td>80.00%</td>
+                <td>Id</td>
+                <td>100.00%</td>
+                <td align="right">-2.8834</td>
+                <td align="right">77.22</td>
+                <td align="right">7.9</td>
+                </tr>
+                <tr>
+                <td align="right">3421765</td>
+                <td>Nanortalik</td>
+                <td>0.00%</td>
+                <td>Gl</td>
+                <td>100.00%</td>
+                <td align="right">60.1432</td>
+                <td align="right">24.98</td>
+                <td align="right">42.46</td>
+                </tr>
+                <tr>
+                <td align="right">1863495</td>
+                <td>Gushikawa</td>
+                <td>48.00%</td>
+                <td>Jp</td>
+                <td>99.00%</td>
+                <td align="right">26.3544</td>
+                <td align="right">64.9</td>
+                <td align="right">11.14</td>
+                </tr>
+                <tr>
+                <td align="right">2642910</td>
+                <td>Matlock</td>
+                <td>92.00%</td>
+                <td>Gb</td>
+                <td>86.00%</td>
+                <td align="right">53.1375</td>
+                <td align="right">41.67</td>
+                <td align="right">8.57</td>
+                </tr>
+                <tr>
+                <td align="right">5392952</td>
+                <td>Santa Barbara</td>
+                <td>0.00%</td>
+                <td>Us</td>
+                <td>80.00%</td>
+                <td align="right">34.4221</td>
+                <td align="right">64.22</td>
+                <td align="right">22.55</td>
+                </tr>
+                <tr>
+                <td align="right">5983720</td>
+                <td>Iqaluit</td>
+                <td>76.00%</td>
+                <td>Ca</td>
+                <td>86.00%</td>
+                <td align="right">63.7494</td>
+                <td align="right">18.73</td>
+                <td align="right">8.46</td>
+                </tr>
+                <tr>
+                <td align="right">3571913</td>
+                <td>Marsh Harbour</td>
+                <td>92.00%</td>
+                <td>Bs</td>
+                <td>100.00%</td>
+                <td align="right">26.5383</td>
+                <td align="right">70.52</td>
+                <td align="right">24.56</td>
+                </tr>
+                <tr>
+                <td align="right">889215</td>
+                <td>Kariba</td>
+                <td>36.00%</td>
+                <td>Zw</td>
+                <td>95.00%</td>
+                <td align="right">-16.5273</td>
+                <td align="right">70.56</td>
+                <td align="right">2.42</td>
+                </tr>
+                <tr>
+                <td align="right">2084442</td>
+                <td>Vanimo</td>
+                <td>44.00%</td>
+                <td>Pg</td>
+                <td>100.00%</td>
+                <td align="right">-2.6741</td>
+                <td align="right">80.96</td>
+                <td align="right">1.74</td>
+                </tr>
+                <tr>
+                <td align="right">3839307</td>
+                <td>Rawson</td>
+                <td>20.00%</td>
+                <td>Ar</td>
+                <td>25.00%</td>
+                <td align="right">-43.2992</td>
+                <td align="right">58.87</td>
+                <td align="right">10.47</td>
+                </tr>
+                <tr>
+                <td align="right">3456248</td>
+                <td>Nortelandia</td>
+                <td>80.00%</td>
+                <td>Br</td>
+                <td>93.00%</td>
+                <td align="right">-14.4548</td>
+                <td align="right">66.74</td>
+                <td align="right">5.44</td>
+                </tr>
+                <tr>
+                <td align="right">5859699</td>
+                <td>College</td>
+                <td>0.00%</td>
+                <td>Us</td>
+                <td>65.00%</td>
+                <td align="right">64.8569</td>
+                <td align="right">31.3</td>
+                <td align="right">11.25</td>
+                </tr>
+                <tr>
+                <td align="right">1006984</td>
+                <td>East London</td>
+                <td>88.00%</td>
+                <td>Za</td>
+                <td>100.00%</td>
+                <td align="right">-33.0153</td>
+                <td align="right">71.71</td>
+                <td align="right">15.5</td>
+                </tr>
+                <tr>
+                <td align="right">6185377</td>
+                <td>Yellowknife</td>
+                <td>0.00%</td>
+                <td>Ca</td>
+                <td>63.00%</td>
+                <td align="right">62.4541</td>
+                <td align="right">-3.48</td>
+                <td align="right">8.12</td>
+                </tr>
+                <tr>
+                <td align="right">2022572</td>
+                <td>Khatanga</td>
+                <td>20.00%</td>
+                <td>Ru</td>
+                <td>53.00%</td>
+                <td align="right">71.9801</td>
+                <td align="right">-32.19</td>
+                <td align="right">6.78</td>
+                </tr>
+                <tr>
+                <td align="right">2094027</td>
+                <td>Kieta</td>
+                <td>80.00%</td>
+                <td>Pg</td>
+                <td>100.00%</td>
+                <td align="right">-6.2167</td>
+                <td align="right">83.88</td>
+                <td align="right">4.09</td>
+                </tr>
+                <tr>
+                <td align="right">6180550</td>
+                <td>Whitehorse</td>
+                <td>44.00%</td>
+                <td>Ca</td>
+                <td>61.00%</td>
+                <td align="right">60.7216</td>
+                <td align="right">19.96</td>
+                <td align="right">3.76</td>
+                </tr>
+                <tr>
+                <td align="right">3404558</td>
+                <td>Cabedelo</td>
+                <td>76.00%</td>
+                <td>Br</td>
+                <td>91.00%</td>
+                <td align="right">-6.9733</td>
+                <td align="right">78.78</td>
+                <td align="right">7.0</td>
+                </tr>
+                <tr>
+                <td align="right">1255361</td>
+                <td>Suratgarh</td>
+                <td>0.00%</td>
+                <td>In</td>
+                <td>43.00%</td>
+                <td align="right">29.3203</td>
+                <td align="right">61.11</td>
+                <td align="right">2.75</td>
+                </tr>
+                <tr>
+                <td align="right">292968</td>
+                <td>Abu Dhabi</td>
+                <td>0.00%</td>
+                <td>Ae</td>
+                <td>94.00%</td>
+                <td align="right">24.4748</td>
+                <td align="right">72.72</td>
+                <td align="right">2.86</td>
+                </tr>
+                <tr>
+                <td align="right">6170031</td>
+                <td>Tuktoyaktuk</td>
+                <td>0.00%</td>
+                <td>Ca</td>
+                <td>78.00%</td>
+                <td align="right">69.444</td>
+                <td align="right">-8.92</td>
+                <td align="right">3.09</td>
+                </tr>
+                <tr>
+                <td align="right">3155913</td>
+                <td>Geilo</td>
+                <td>64.00%</td>
+                <td>No</td>
+                <td>89.00%</td>
+                <td align="right">60.5333</td>
+                <td align="right">12.31</td>
+                <td align="right">2.3</td>
+                </tr>
+                <tr>
+                <td align="right">1253628</td>
+                <td>Lata</td>
+                <td>0.00%</td>
+                <td>In</td>
+                <td>39.00%</td>
+                <td align="right">30.7809</td>
+                <td align="right">44.71</td>
+                <td align="right">3.42</td>
+                </tr>
+                <tr>
+                <td align="right">2121385</td>
+                <td>Severo-kurilsk</td>
+                <td>32.00%</td>
+                <td>Ru</td>
+                <td>100.00%</td>
+                <td align="right">50.6789</td>
+                <td align="right">33.15</td>
+                <td align="right">4.76</td>
+                </tr>
+                <tr>
+                <td align="right">6089245</td>
+                <td>Norman Wells</td>
+                <td>0.00%</td>
+                <td>Ca</td>
+                <td>73.00%</td>
+                <td align="right">65.2824</td>
+                <td align="right">0.97</td>
+                <td align="right">3.65</td>
+                </tr>
+                <tr>
+                <td align="right">1244926</td>
+                <td>Hambantota</td>
+                <td>88.00%</td>
+                <td>Lk</td>
+                <td>100.00%</td>
+                <td align="right">6.1241</td>
+                <td align="right">79.63</td>
+                <td align="right">7.67</td>
+                </tr>
+                <tr>
+                <td align="right">3573739</td>
+                <td>Esperance</td>
+                <td>92.00%</td>
+                <td>Tt</td>
+                <td>81.00%</td>
+                <td align="right">10.2447</td>
+                <td align="right">77.2</td>
+                <td align="right">6.89</td>
+                </tr>
+                <tr>
+                <td align="right">49747</td>
+                <td>Xuddur</td>
+                <td>0.00%</td>
+                <td>So</td>
+                <td>79.00%</td>
+                <td align="right">4.1213</td>
+                <td align="right">67.1</td>
+                <td align="right">10.36</td>
+                </tr>
+                <tr>
+                <td align="right">3424607</td>
+                <td>Tasiilaq</td>
+                <td>0.00%</td>
+                <td>Gl</td>
+                <td>89.00%</td>
+                <td align="right">65.6145</td>
+                <td align="right">24.67</td>
+                <td align="right">23.22</td>
+                </tr>
+                <tr>
+                <td align="right">1511057</td>
+                <td>Bakchar</td>
+                <td>88.00%</td>
+                <td>Ru</td>
+                <td>82.00%</td>
+                <td align="right">57.0205</td>
+                <td align="right">24.85</td>
+                <td align="right">9.46</td>
+                </tr>
+                <tr>
+                <td align="right">3135728</td>
+                <td>Straumen</td>
+                <td>0.00%</td>
+                <td>No</td>
+                <td>80.00%</td>
+                <td align="right">63.8723</td>
+                <td align="right">16.56</td>
+                <td align="right">2.42</td>
+                </tr>
+                <tr>
+                <td align="right">668660</td>
+                <td>Roseti</td>
+                <td>88.00%</td>
+                <td>Ro</td>
+                <td>100.00%</td>
+                <td align="right">44.2167</td>
+                <td align="right">34.12</td>
+                <td align="right">8.46</td>
+                </tr>
+                <tr>
+                <td align="right">3356832</td>
+                <td>Henties Bay</td>
+                <td>8.00%</td>
+                <td>Na</td>
+                <td>100.00%</td>
+                <td align="right">-22.1161</td>
+                <td align="right">61.45</td>
+                <td align="right">3.2</td>
+                </tr>
+                <tr>
+                <td align="right">262462</td>
+                <td>Chara</td>
+                <td>0.00%</td>
+                <td>Gr</td>
+                <td>85.00%</td>
+                <td align="right">39.4167</td>
+                <td align="right">46.47</td>
+                <td align="right">3.65</td>
+                </tr>
+                <tr>
+                <td align="right">7626370</td>
+                <td>Bud</td>
+                <td>0.00%</td>
+                <td>No</td>
+                <td>100.00%</td>
+                <td align="right">62.9088</td>
+                <td align="right">30.29</td>
+                <td align="right">17.18</td>
+                </tr>
+                <tr>
+                <td align="right">3421982</td>
+                <td>Maniitsoq</td>
+                <td>0.00%</td>
+                <td>Gl</td>
+                <td>87.00%</td>
+                <td align="right">65.4167</td>
+                <td align="right">-9.78</td>
+                <td align="right">6.22</td>
+                </tr>
+                <tr>
+                <td align="right">3572189</td>
+                <td>Freetown</td>
+                <td>92.00%</td>
+                <td>Bs</td>
+                <td>100.00%</td>
+                <td align="right">26.6117</td>
+                <td align="right">69.67</td>
+                <td align="right">21.88</td>
+                </tr>
+                <tr>
+                <td align="right">2181625</td>
+                <td>Te Anau</td>
+                <td>92.00%</td>
+                <td>Nz</td>
+                <td>75.00%</td>
+                <td align="right">-45.4145</td>
+                <td align="right">53.82</td>
+                <td align="right">14.72</td>
+                </tr>
+                <tr>
+                <td align="right">3141548</td>
+                <td>Rognan</td>
+                <td>32.00%</td>
+                <td>No</td>
+                <td>87.00%</td>
+                <td align="right">67.1003</td>
+                <td align="right">18.82</td>
+                <td align="right">4.21</td>
+                </tr>
+                <tr>
+                <td align="right">2063030</td>
+                <td>Port Pirie</td>
+                <td>8.00%</td>
+                <td>Au</td>
+                <td>87.00%</td>
+                <td align="right">-33.1792</td>
+                <td align="right">63.3</td>
+                <td align="right">9.13</td>
+                </tr>
+                <tr>
+                <td align="right">1490256</td>
+                <td>Talnakh</td>
+                <td>68.00%</td>
+                <td>Ru</td>
+                <td>70.00%</td>
+                <td align="right">69.494</td>
+                <td align="right">-2.13</td>
+                <td align="right">6.44</td>
+                </tr>
+                <tr>
+                <td align="right">4036284</td>
+                <td>Alofi</td>
+                <td>92.00%</td>
+                <td>Nu</td>
+                <td>100.00%</td>
+                <td align="right">-19.0596</td>
+                <td align="right">78.57</td>
+                <td align="right">7.78</td>
+                </tr>
+                <tr>
+                <td align="right">2160517</td>
+                <td>Launceston</td>
+                <td>64.00%</td>
+                <td>Au</td>
+                <td>87.00%</td>
+                <td align="right">-41.4341</td>
+                <td align="right">60.6</td>
+                <td align="right">4.65</td>
+                </tr>
+                <tr>
+                <td align="right">3894426</td>
+                <td>Coihaique</td>
+                <td>32.00%</td>
+                <td>Cl</td>
+                <td>61.00%</td>
+                <td align="right">-45.5753</td>
+                <td align="right">52.52</td>
+                <td align="right">7.78</td>
+                </tr>
+                <tr>
+                <td align="right">2517679</td>
+                <td>Fortuna</td>
+                <td>0.00%</td>
+                <td>Es</td>
+                <td>48.00%</td>
+                <td align="right">38.1801</td>
+                <td align="right">53.26</td>
+                <td align="right">10.47</td>
+                </tr>
+                <tr>
+                <td align="right">3154539</td>
+                <td>Gullhaug</td>
+                <td>12.00%</td>
+                <td>No</td>
+                <td>98.00%</td>
+                <td align="right">59.5</td>
+                <td align="right">22.62</td>
+                <td align="right">2.75</td>
+                </tr>
+                <tr>
+                <td align="right">5847411</td>
+                <td>Kahului</td>
+                <td>8.00%</td>
+                <td>Us</td>
+                <td>79.00%</td>
+                <td align="right">20.8894</td>
+                <td align="right">78.53</td>
+                <td align="right">9.8</td>
+                </tr>
+                <tr>
+                <td align="right">3347019</td>
+                <td>Namibe</td>
+                <td>56.00%</td>
+                <td>Ao</td>
+                <td>100.00%</td>
+                <td align="right">-15.1902</td>
+                <td align="right">77.49</td>
+                <td align="right">6.67</td>
+                </tr>
+                <tr>
+                <td align="right">232571</td>
+                <td>Kalangala</td>
+                <td>68.00%</td>
+                <td>Ug</td>
+                <td>100.00%</td>
+                <td align="right">-0.3202</td>
+                <td align="right">69.57</td>
+                <td align="right">2.53</td>
+                </tr>
+                <tr>
+                <td align="right">3388847</td>
+                <td>Sao Felix Do Xingu</td>
+                <td>44.00%</td>
+                <td>Br</td>
+                <td>88.00%</td>
+                <td align="right">-6.6448</td>
+                <td align="right">73.36</td>
+                <td align="right">2.86</td>
+                </tr>
+                <tr>
+                <td align="right">712587</td>
+                <td>Novikovo</td>
+                <td>92.00%</td>
+                <td>Ua</td>
+                <td>100.00%</td>
+                <td align="right">45.0515</td>
+                <td align="right">43.12</td>
+                <td align="right">5.44</td>
+                </tr>
+                <tr>
+                <td align="right">3404713</td>
+                <td>Buriti Dos Lopes</td>
+                <td>88.00%</td>
+                <td>Br</td>
+                <td>100.00%</td>
+                <td align="right">-3.1777</td>
+                <td align="right">78.53</td>
+                <td align="right">2.75</td>
+                </tr>
+                <tr>
+                <td align="right">581080</td>
+                <td>Arkadak</td>
+                <td>0.00%</td>
+                <td>Ru</td>
+                <td>84.00%</td>
+                <td align="right">51.9429</td>
+                <td align="right">15.39</td>
+                <td align="right">10.8</td>
+                </tr>
+                <tr>
+                <td align="right">1633419</td>
+                <td>Padang</td>
+                <td>92.00%</td>
+                <td>Id</td>
+                <td>100.00%</td>
+                <td align="right">-0.9248</td>
+                <td align="right">82.33</td>
+                <td align="right">4.76</td>
+                </tr>
+                <tr>
+                <td align="right">712969</td>
+                <td>Dachnoye</td>
+                <td>92.00%</td>
+                <td>Ua</td>
+                <td>92.00%</td>
+                <td align="right">44.7153</td>
+                <td align="right">46.85</td>
+                <td align="right">10.69</td>
+                </tr>
+                <tr>
+                <td align="right">2155858</td>
+                <td>Nambucca Heads</td>
+                <td>48.00%</td>
+                <td>Au</td>
+                <td>91.00%</td>
+                <td align="right">-30.645</td>
+                <td align="right">74.79</td>
+                <td align="right">5.99</td>
+                </tr>
+                <tr>
+                <td align="right">6320062</td>
+                <td>Vila Velha</td>
+                <td>68.00%</td>
+                <td>Br</td>
+                <td>100.00%</td>
+                <td align="right">-3.7125</td>
+                <td align="right">80.56</td>
+                <td align="right">6.22</td>
+                </tr>
+                <tr>
+                <td align="right">3427761</td>
+                <td>Tigre</td>
+                <td>12.00%</td>
+                <td>Ar</td>
+                <td>75.00%</td>
+                <td align="right">-34.4227</td>
+                <td align="right">55.9</td>
+                <td align="right">7.56</td>
+                </tr>
+                <tr>
+                <td align="right">69559</td>
+                <td>Aras</td>
+                <td>0.00%</td>
+                <td>Ye</td>
+                <td>53.00%</td>
+                <td align="right">14.2793</td>
+                <td align="right">33.03</td>
+                <td align="right">2.64</td>
+                </tr>
+                <tr>
+                <td align="right">4407665</td>
+                <td>Kodiak</td>
+                <td>92.00%</td>
+                <td>Us</td>
+                <td>98.00%</td>
+                <td align="right">39.9519</td>
+                <td align="right">48.67</td>
+                <td align="right">11.03</td>
+                </tr>
+                <tr>
+                <td align="right">2126199</td>
+                <td>Cherskiy</td>
+                <td>0.00%</td>
+                <td>Ru</td>
+                <td>64.00%</td>
+                <td align="right">68.75</td>
+                <td align="right">11.25</td>
+                <td align="right">3.42</td>
+                </tr>
+                <tr>
+                <td align="right">286245</td>
+                <td>Sur</td>
+                <td>0.00%</td>
+                <td>Om</td>
+                <td>83.00%</td>
+                <td align="right">22.5702</td>
+                <td align="right">76.98</td>
+                <td align="right">4.43</td>
+                </tr>
+                <tr>
+                <td align="right">750510</td>
+                <td>Bolu</td>
+                <td>24.00%</td>
+                <td>Tr</td>
+                <td>50.00%</td>
+                <td align="right">40.7345</td>
+                <td align="right">46.81</td>
+                <td align="right">8.01</td>
+                </tr>
+                <tr>
+                <td align="right">5880568</td>
+                <td>Bethel</td>
+                <td>88.00%</td>
+                <td>Us</td>
+                <td>90.00%</td>
+                <td align="right">60.7922</td>
+                <td align="right">36.7</td>
+                <td align="right">10.25</td>
+                </tr>
+                <tr>
+                <td align="right">6111867</td>
+                <td>Port Hawkesbury</td>
+                <td>0.00%</td>
+                <td>Ca</td>
+                <td>86.00%</td>
+                <td align="right">45.6181</td>
+                <td align="right">26.56</td>
+                <td align="right">11.92</td>
+                </tr>
+                <tr>
+                <td align="right">5406222</td>
+                <td>Victorville</td>
+                <td>0.00%</td>
+                <td>Us</td>
+                <td>23.00%</td>
+                <td align="right">34.5361</td>
+                <td align="right">61.25</td>
+                <td align="right">9.24</td>
+                </tr>
+                <tr>
+                <td align="right">5264223</td>
+                <td>Neenah</td>
+                <td>92.00%</td>
+                <td>Us</td>
+                <td>83.00%</td>
+                <td align="right">44.1858</td>
+                <td align="right">43.66</td>
+                <td align="right">18.52</td>
+                </tr>
+                <tr>
+                <td align="right">694137</td>
+                <td>Shevchenkove</td>
+                <td>68.00%</td>
+                <td>Ua</td>
+                <td>66.00%</td>
+                <td align="right">49.6953</td>
+                <td align="right">28.87</td>
+                <td align="right">6.78</td>
+                </tr>
+                <tr>
+                <td align="right">2641434</td>
+                <td>Northam</td>
+                <td>92.00%</td>
+                <td>Gb</td>
+                <td>96.00%</td>
+                <td align="right">51.0401</td>
+                <td align="right">44.56</td>
+                <td align="right">17.52</td>
+                </tr>
+                <tr>
+                <td align="right">160677</td>
+                <td>Chake Chake</td>
+                <td>80.00%</td>
+                <td>Tz</td>
+                <td>100.00%</td>
+                <td align="right">-5.2459</td>
+                <td align="right">80.1</td>
+                <td align="right">5.21</td>
+                </tr>
+                <tr>
+                <td align="right">1513957</td>
+                <td>Hazorasp</td>
+                <td>88.00%</td>
+                <td>Uz</td>
+                <td>86.00%</td>
+                <td align="right">41.3154</td>
+                <td align="right">46.6</td>
+                <td align="right">9.46</td>
+                </tr>
+                <tr>
+                <td align="right">2093685</td>
+                <td>Kokopo</td>
+                <td>56.00%</td>
+                <td>Pg</td>
+                <td>100.00%</td>
+                <td align="right">-4.3439</td>
+                <td align="right">83.95</td>
+                <td align="right">4.76</td>
+                </tr>
+                <tr>
+                <td align="right">4204007</td>
+                <td>Kingsland</td>
+                <td>92.00%</td>
+                <td>Us</td>
+                <td>98.00%</td>
+                <td align="right">30.8</td>
+                <td align="right">57.97</td>
+                <td align="right">10.8</td>
+                </tr>
+                <tr>
+                <td align="right">5039421</td>
+                <td>North Branch</td>
+                <td>92.00%</td>
+                <td>Us</td>
+                <td>100.00%</td>
+                <td align="right">45.5114</td>
+                <td align="right">32.29</td>
+                <td align="right">3.42</td>
+                </tr>
+                <tr>
+                <td align="right">2068655</td>
+                <td>Katherine</td>
+                <td>8.00%</td>
+                <td>Au</td>
+                <td>75.00%</td>
+                <td align="right">-14.4657</td>
+                <td align="right">87.3</td>
+                <td align="right">4.76</td>
+                </tr>
+                <tr>
+                <td align="right">2179825</td>
+                <td>Waitati</td>
+                <td>88.00%</td>
+                <td>Nz</td>
+                <td>57.00%</td>
+                <td align="right">-45.7479</td>
+                <td align="right">76.82</td>
+                <td align="right">15.5</td>
+                </tr>
+                <tr>
+                <td align="right">352733</td>
+                <td>Marsa Matruh</td>
+                <td>0.00%</td>
+                <td>Eg</td>
+                <td>25.00%</td>
+                <td align="right">31.3525</td>
+                <td align="right">56.7</td>
+                <td align="right">9.24</td>
+                </tr>
+                <tr>
+                <td align="right">4776222</td>
+                <td>Norfolk</td>
+                <td>0.00%</td>
+                <td>Us</td>
+                <td>78.00%</td>
+                <td align="right">36.8463</td>
+                <td align="right">39.47</td>
+                <td align="right">15.73</td>
+                </tr>
+                <tr>
+                <td align="right">1488632</td>
+                <td>Uglovskoye</td>
+                <td>56.00%</td>
+                <td>Ru</td>
+                <td>90.00%</td>
+                <td align="right">51.3557</td>
+                <td align="right">22.68</td>
+                <td align="right">7.23</td>
+                </tr>
+                <tr>
+                <td align="right">3372783</td>
+                <td>Ponta Delgada</td>
+                <td>8.00%</td>
+                <td>Pt</td>
+                <td>100.00%</td>
+                <td align="right">37.7333</td>
+                <td align="right">56.91</td>
+                <td align="right">0.74</td>
+                </tr>
+                <tr>
+                <td align="right">2025256</td>
+                <td>Chumikan</td>
+                <td>92.00%</td>
+                <td>Ru</td>
+                <td>89.00%</td>
+                <td align="right">54.7183</td>
+                <td align="right">29.17</td>
+                <td align="right">4.21</td>
+                </tr>
+                <tr>
+                <td align="right">262462</td>
+                <td>Saint George</td>
+                <td>0.00%</td>
+                <td>Gr</td>
+                <td>85.00%</td>
+                <td align="right">39.4548</td>
+                <td align="right">46.47</td>
+                <td align="right">3.65</td>
+                </tr>
+                <tr>
+                <td align="right">3981460</td>
+                <td>Coahuayana</td>
+                <td>0.00%</td>
+                <td>Mx</td>
+                <td>28.00%</td>
+                <td align="right">18.6201</td>
+                <td align="right">83.48</td>
+                <td align="right">2.98</td>
+                </tr>
+                <tr>
+                <td align="right">3863379</td>
+                <td>Mar Del Plata</td>
+                <td>88.00%</td>
+                <td>Ar</td>
+                <td>48.00%</td>
+                <td align="right">-46.4276</td>
+                <td align="right">59.47</td>
+                <td align="right">23.55</td>
+                </tr>
+                <tr>
+                <td align="right">94787</td>
+                <td>Kirkuk</td>
+                <td>0.00%</td>
+                <td>Iq</td>
+                <td>75.00%</td>
+                <td align="right">35.4701</td>
+                <td align="right">43.0</td>
+                <td align="right">3.09</td>
+                </tr>
+                <tr>
+                <td align="right">3832899</td>
+                <td>Viedma</td>
+                <td>0.00%</td>
+                <td>Ar</td>
+                <td>36.00%</td>
+                <td align="right">-40.8086</td>
+                <td align="right">57.74</td>
+                <td align="right">14.16</td>
+                </tr>
+                <tr>
+                <td align="right">3516376</td>
+                <td>Tamiahua</td>
+                <td>8.00%</td>
+                <td>Mx</td>
+                <td>78.00%</td>
+                <td align="right">21.2781</td>
+                <td align="right">79.23</td>
+                <td align="right">17.74</td>
+                </tr>
+                <tr>
+                <td align="right">667952</td>
+                <td>Saru Dornei</td>
+                <td>48.00%</td>
+                <td>Ro</td>
+                <td>87.00%</td>
+                <td align="right">47.2833</td>
+                <td align="right">22.53</td>
+                <td align="right">1.63</td>
+                </tr>
+                <tr>
+                <td align="right">5686121</td>
+                <td>Whitefish</td>
+                <td>88.00%</td>
+                <td>Us</td>
+                <td>58.00%</td>
+                <td align="right">48.4108</td>
+                <td align="right">37.87</td>
+                <td align="right">5.66</td>
+                </tr>
+                <tr>
+                <td align="right">3397763</td>
+                <td>Jacareacanga</td>
+                <td>8.00%</td>
+                <td>Br</td>
+                <td>77.00%</td>
+                <td align="right">-6.2243</td>
+                <td align="right">80.51</td>
+                <td align="right">3.76</td>
+                </tr>
+                <tr>
+                <td align="right">1015776</td>
+                <td>Bredasdorp</td>
+                <td>0.00%</td>
+                <td>Za</td>
+                <td>100.00%</td>
+                <td align="right">-34.5331</td>
+                <td align="right">55.11</td>
+                <td align="right">16.17</td>
+                </tr>
+                <tr>
+                <td align="right">3037899</td>
+                <td>Ambon</td>
+                <td>92.00%</td>
+                <td>Fr</td>
+                <td>96.00%</td>
+                <td align="right">47.5542</td>
+                <td align="right">48.85</td>
+                <td align="right">14.83</td>
+                </tr>
+                <tr>
+                <td align="right">4030556</td>
+                <td>Rikitea</td>
+                <td>76.00%</td>
+                <td>Pf</td>
+                <td>100.00%</td>
+                <td align="right">-23.1203</td>
+                <td align="right">79.99</td>
+                <td align="right">18.86</td>
+                </tr>
+                <tr>
+                <td align="right">1529484</td>
+                <td>Hami</td>
+                <td>32.00%</td>
+                <td>Cn</td>
+                <td>55.00%</td>
+                <td align="right">42.8354</td>
+                <td align="right">45.9</td>
+                <td align="right">9.91</td>
+                </tr>
+                <tr>
+                <td align="right">2155415</td>
+                <td>New Norfolk</td>
+                <td>68.00%</td>
+                <td>Au</td>
+                <td>84.00%</td>
+                <td align="right">-42.7802</td>
+                <td align="right">58.98</td>
+                <td align="right">4.99</td>
+                </tr>
+                <tr>
+                <td align="right">5955902</td>
+                <td>Fort Nelson</td>
+                <td>12.00%</td>
+                <td>Ca</td>
+                <td>46.00%</td>
+                <td align="right">58.8063</td>
+                <td align="right">15.12</td>
+                <td align="right">3.87</td>
+                </tr>
+                <tr>
+                <td align="right">2101169</td>
+                <td>Aitape</td>
+                <td>88.00%</td>
+                <td>Pg</td>
+                <td>100.00%</td>
+                <td align="right">-3.1511</td>
+                <td align="right">80.85</td>
+                <td align="right">3.65</td>
+                </tr>
+                <tr>
+                <td align="right">2136825</td>
+                <td>Isangel</td>
+                <td>92.00%</td>
+                <td>Vu</td>
+                <td>100.00%</td>
+                <td align="right">-19.55</td>
+                <td align="right">79.03</td>
+                <td align="right">20.76</td>
+                </tr>
+                <tr>
+                <td align="right">2264923</td>
+                <td>Peniche</td>
+                <td>48.00%</td>
+                <td>Pt</td>
+                <td>97.00%</td>
+                <td align="right">39.3566</td>
+                <td align="right">52.75</td>
+                <td align="right">10.36</td>
+                </tr>
+                <tr>
+                <td align="right">2281120</td>
+                <td>Tabou</td>
+                <td>12.00%</td>
+                <td>Ci</td>
+                <td>100.00%</td>
+                <td align="right">4.4194</td>
+                <td align="right">81.91</td>
+                <td align="right">9.35</td>
+                </tr>
+                <tr>
+                <td align="right">4501427</td>
+                <td>Port Elizabeth</td>
+                <td>0.00%</td>
+                <td>Us</td>
+                <td>69.00%</td>
+                <td align="right">39.3134</td>
+                <td align="right">34.05</td>
+                <td align="right">9.69</td>
+                </tr>
+                <tr>
+                <td align="right">2208248</td>
+                <td>Kaitangata</td>
+                <td>92.00%</td>
+                <td>Nz</td>
+                <td>99.00%</td>
+                <td align="right">-46.2818</td>
+                <td align="right">61.02</td>
+                <td align="right">7.0</td>
+                </tr>
+                <tr>
+                <td align="right">2016216</td>
+                <td>Sosnovo-ozerskoye</td>
+                <td>88.00%</td>
+                <td>Ru</td>
+                <td>83.00%</td>
+                <td align="right">52.5286</td>
+                <td align="right">31.82</td>
+                <td align="right">14.83</td>
+                </tr>
+                <tr>
+                <td align="right">5882953</td>
+                <td>Aklavik</td>
+                <td>0.00%</td>
+                <td>Ca</td>
+                <td>87.00%</td>
+                <td align="right">68.2183</td>
+                <td align="right">-0.1</td>
+                <td align="right">4.88</td>
+                </tr>
+                <tr>
+                <td align="right">5972291</td>
+                <td>Havre-saint-pierre</td>
+                <td>0.00%</td>
+                <td>Ca</td>
+                <td>83.00%</td>
+                <td align="right">50.2334</td>
+                <td align="right">21.43</td>
+                <td align="right">10.25</td>
+                </tr>
+                <tr>
+                <td align="right">6355222</td>
+                <td>Yulara</td>
+                <td>0.00%</td>
+                <td>Au</td>
+                <td>34.00%</td>
+                <td align="right">-25.2411</td>
+                <td align="right">74.23</td>
+                <td align="right">6.11</td>
+                </tr>
+                <tr>
+                <td align="right">2112802</td>
+                <td>Hasaki</td>
+                <td>20.00%</td>
+                <td>Jp</td>
+                <td>100.00%</td>
+                <td align="right">35.7333</td>
+                <td align="right">50.77</td>
+                <td align="right">3.76</td>
+                </tr>
+                <tr>
+                <td align="right">2172880</td>
+                <td>Byron Bay</td>
+                <td>92.00%</td>
+                <td>Au</td>
+                <td>100.00%</td>
+                <td align="right">-28.65</td>
+                <td align="right">74.79</td>
+                <td align="right">8.12</td>
+                </tr>
+                <tr>
+                <td align="right">3840300</td>
+                <td>Presidencia Roque Saenz Pena</td>
+                <td>0.00%</td>
+                <td>Ar</td>
+                <td>80.00%</td>
+                <td align="right">-26.7853</td>
+                <td align="right">52.0</td>
+                <td align="right">8.46</td>
+                </tr>
+                <tr>
+                <td align="right">2399697</td>
+                <td>Libreville</td>
+                <td>92.00%</td>
+                <td>Ga</td>
+                <td>100.00%</td>
+                <td align="right">0.39</td>
+                <td align="right">81.7</td>
+                <td align="right">2.98</td>
+                </tr>
+                <tr>
+                <td align="right">2035715</td>
+                <td>Mudanjiang</td>
+                <td>24.00%</td>
+                <td>Cn</td>
+                <td>55.00%</td>
+                <td align="right">44.5784</td>
+                <td align="right">55.2</td>
+                <td align="right">10.8</td>
+                </tr>
+                <tr>
+                <td align="right">2618795</td>
+                <td>Klaksvik</td>
+                <td>48.00%</td>
+                <td>Fo</td>
+                <td>96.00%</td>
+                <td align="right">62.2266</td>
+                <td align="right">37.99</td>
+                <td align="right">28.81</td>
+                </tr>
+                <tr>
+                <td align="right">5309842</td>
+                <td>Prescott</td>
+                <td>92.00%</td>
+                <td>Us</td>
+                <td>24.00%</td>
+                <td align="right">34.5403</td>
+                <td align="right">54.12</td>
+                <td align="right">5.44</td>
+                </tr>
+                <tr>
+                <td align="right">3418910</td>
+                <td>Upernavik</td>
+                <td>8.00%</td>
+                <td>Gl</td>
+                <td>100.00%</td>
+                <td align="right">72.7868</td>
+                <td align="right">-14.44</td>
+                <td align="right">5.99</td>
+                </tr>
+                <tr>
+                <td align="right">1518542</td>
+                <td>Karabulak</td>
+                <td>56.00%</td>
+                <td>Kz</td>
+                <td>97.00%</td>
+                <td align="right">44.9082</td>
+                <td align="right">39.6</td>
+                <td align="right">3.09</td>
+                </tr>
+                <tr>
+                <td align="right">3933104</td>
+                <td>Pangoa</td>
+                <td>92.00%</td>
+                <td>Pe</td>
+                <td>93.00%</td>
+                <td align="right">-12.1167</td>
+                <td align="right">62.26</td>
+                <td align="right">1.97</td>
+                </tr>
+                <tr>
+                <td align="right">2013923</td>
+                <td>Ust-kut</td>
+                <td>36.00%</td>
+                <td>Ru</td>
+                <td>82.00%</td>
+                <td align="right">56.7804</td>
+                <td align="right">12.13</td>
+                <td align="right">2.42</td>
+                </tr>
+                <tr>
+                <td align="right">3577430</td>
+                <td>Road Town</td>
+                <td>56.00%</td>
+                <td>Vg</td>
+                <td>100.00%</td>
+                <td align="right">18.4167</td>
+                <td align="right">76.71</td>
+                <td align="right">9.35</td>
+                </tr>
+                <tr>
+                <td align="right">5814616</td>
+                <td>Vancouver</td>
+                <td>92.00%</td>
+                <td>Us</td>
+                <td>100.00%</td>
+                <td align="right">45.6307</td>
+                <td align="right">48.56</td>
+                <td align="right">4.65</td>
+                </tr>
+                <tr>
+                <td align="right">3877918</td>
+                <td>Ovalle</td>
+                <td>0.00%</td>
+                <td>Cl</td>
+                <td>93.00%</td>
+                <td align="right">-30.6031</td>
+                <td align="right">53.37</td>
+                <td align="right">2.86</td>
+                </tr>
+                <tr>
+                <td align="right">2037222</td>
+                <td>Gongzhuling</td>
+                <td>8.00%</td>
+                <td>Cn</td>
+                <td>43.00%</td>
+                <td align="right">43.5025</td>
+                <td align="right">62.73</td>
+                <td align="right">18.75</td>
+                </tr>
+                <tr>
+                <td align="right">3466165</td>
+                <td>Cidreira</td>
+                <td>92.00%</td>
+                <td>Br</td>
+                <td>85.00%</td>
+                <td align="right">-30.1658</td>
+                <td align="right">69.21</td>
+                <td align="right">11.03</td>
+                </tr>
+                <tr>
+                <td align="right">2110227</td>
+                <td>Butaritari</td>
+                <td>0.00%</td>
+                <td>Ki</td>
+                <td>97.00%</td>
+                <td align="right">3.0707</td>
+                <td align="right">84.25</td>
+                <td align="right">13.82</td>
+                </tr>
+                <tr>
+                <td align="right">2643490</td>
+                <td>Lowestoft</td>
+                <td>44.00%</td>
+                <td>Gb</td>
+                <td>95.00%</td>
+                <td align="right">52.4752</td>
+                <td align="right">43.02</td>
+                <td align="right">9.8</td>
+                </tr>
+                <tr>
+                <td align="right">1636308</td>
+                <td>Manokwari</td>
+                <td>24.00%</td>
+                <td>Id</td>
+                <td>100.00%</td>
+                <td align="right">-0.8667</td>
+                <td align="right">82.67</td>
+                <td align="right">3.65</td>
+                </tr>
+                <tr>
+                <td align="right">2126123</td>
+                <td>Chokurdakh</td>
+                <td>48.00%</td>
+                <td>Ru</td>
+                <td>72.00%</td>
+                <td align="right">70.6192</td>
+                <td align="right">2.75</td>
+                <td align="right">12.48</td>
+                </tr>
+                <tr>
+                <td align="right">2078025</td>
+                <td>Peterhead</td>
+                <td>20.00%</td>
+                <td>Au</td>
+                <td>85.00%</td>
+                <td align="right">-34.8297</td>
+                <td align="right">66.7</td>
+                <td align="right">11.03</td>
+                </tr>
+                <tr>
+                <td align="right">1273574</td>
+                <td>Vaini</td>
+                <td>8.00%</td>
+                <td>In</td>
+                <td>94.00%</td>
+                <td align="right">15.336</td>
+                <td align="right">65.23</td>
+                <td align="right">1.52</td>
+                </tr>
+                <tr>
+                <td align="right">556268</td>
+                <td>Ostrovnoy</td>
+                <td>20.00%</td>
+                <td>Ru</td>
+                <td>85.00%</td>
+                <td align="right">68.0544</td>
+                <td align="right">9.0</td>
+                <td align="right">19.08</td>
+                </tr>
+                <tr>
+                <td align="right">211647</td>
+                <td>Lodja</td>
+                <td>20.00%</td>
+                <td>Cd</td>
+                <td>94.00%</td>
+                <td align="right">-3.5242</td>
+                <td align="right">71.49</td>
+                <td align="right">1.97</td>
+                </tr>
+                <tr>
+                <td align="right">286621</td>
+                <td>Salalah</td>
+                <td>8.00%</td>
+                <td>Om</td>
+                <td>100.00%</td>
+                <td align="right">17.0149</td>
+                <td align="right">78.28</td>
+                <td align="right">3.65</td>
+                </tr>
+                <tr>
+                <td align="right">235191</td>
+                <td>Amudat</td>
+                <td>0.00%</td>
+                <td>Ug</td>
+                <td>77.00%</td>
+                <td align="right">1.9538</td>
+                <td align="right">61.34</td>
+                <td align="right">5.55</td>
+                </tr>
+                <tr>
+                <td align="right">6138908</td>
+                <td>Saint-philippe</td>
+                <td>0.00%</td>
+                <td>Ca</td>
+                <td>80.00%</td>
+                <td align="right">45.3584</td>
+                <td align="right">28.18</td>
+                <td align="right">4.76</td>
+                </tr>
+                <tr>
+                <td align="right">1056386</td>
+                <td>Soanierana Ivongo</td>
+                <td>48.00%</td>
+                <td>Mg</td>
+                <td>100.00%</td>
+                <td align="right">-16.9204</td>
+                <td align="right">75.2</td>
+                <td align="right">6.78</td>
+                </tr>
+                <tr>
+                <td align="right">3868707</td>
+                <td>Valdivia</td>
+                <td>32.00%</td>
+                <td>Cl</td>
+                <td>93.00%</td>
+                <td align="right">-39.8142</td>
+                <td align="right">58.21</td>
+                <td align="right">4.54</td>
+                </tr>
+                <tr>
+                <td align="right">3932145</td>
+                <td>Pisco</td>
+                <td>12.00%</td>
+                <td>Pe</td>
+                <td>73.00%</td>
+                <td align="right">-13.71</td>
+                <td align="right">69.01</td>
+                <td align="right">1.97</td>
+                </tr>
+                <tr>
+                <td align="right">4231997</td>
+                <td>Avera</td>
+                <td>100.00%</td>
+                <td>Us</td>
+                <td>76.00%</td>
+                <td align="right">33.194</td>
+                <td align="right">51.21</td>
+                <td align="right">9.01</td>
+                </tr>
+                <tr>
+                <td align="right">2180815</td>
+                <td>Tuatapere</td>
+                <td>92.00%</td>
+                <td>Nz</td>
+                <td>84.00%</td>
+                <td align="right">-46.1324</td>
+                <td align="right">61.07</td>
+                <td align="right">18.97</td>
+                </tr>
+                <tr>
+                <td align="right">3373652</td>
+                <td>Oistins</td>
+                <td>32.00%</td>
+                <td>Bb</td>
+                <td>99.00%</td>
+                <td align="right">13.0667</td>
+                <td align="right">78.37</td>
+                <td align="right">13.82</td>
+                </tr>
+                <tr>
+                <td align="right">2122605</td>
+                <td>Okhotsk</td>
+                <td>92.00%</td>
+                <td>Ru</td>
+                <td>90.00%</td>
+                <td align="right">59.3644</td>
+                <td align="right">20.23</td>
+                <td align="right">16.51</td>
+                </tr>
+                <tr>
+                <td align="right">1538641</td>
+                <td>Kedrovyy</td>
+                <td>80.00%</td>
+                <td>Ru</td>
+                <td>84.00%</td>
+                <td align="right">56.1667</td>
+                <td align="right">26.19</td>
+                <td align="right">6.55</td>
+                </tr>
+                <tr>
+                <td align="right">3621278</td>
+                <td>Tilaran</td>
+                <td>0.00%</td>
+                <td>Cr</td>
+                <td>38.00%</td>
+                <td align="right">10.4716</td>
+                <td align="right">86.14</td>
+                <td align="right">13.71</td>
+                </tr>
+                <tr>
+                <td align="right">2025456</td>
+                <td>Chernyshevskiy</td>
+                <td>0.00%</td>
+                <td>Ru</td>
+                <td>71.00%</td>
+                <td align="right">63.0128</td>
+                <td align="right">6.49</td>
+                <td align="right">3.2</td>
+                </tr>
+                <tr>
+                <td align="right">933290</td>
+                <td>Mookane</td>
+                <td>12.00%</td>
+                <td>Bw</td>
+                <td>92.00%</td>
+                <td align="right">-23.6847</td>
+                <td align="right">63.1</td>
+                <td align="right">8.68</td>
+                </tr>
+                <tr>
+                <td align="right">2156643</td>
+                <td>Mount Gambier</td>
+                <td>20.00%</td>
+                <td>Au</td>
+                <td>72.00%</td>
+                <td align="right">-37.8302</td>
+                <td align="right">66.34</td>
+                <td align="right">4.76</td>
+                </tr>
+                <tr>
+                <td align="right">2173323</td>
+                <td>Bundaberg</td>
+                <td>80.00%</td>
+                <td>Au</td>
+                <td>99.00%</td>
+                <td align="right">-24.8654</td>
+                <td align="right">79.02</td>
+                <td align="right">21.88</td>
+                </tr>
+                <tr>
+                <td align="right">5916706</td>
+                <td>Carberry</td>
+                <td>64.00%</td>
+                <td>Ca</td>
+                <td>79.00%</td>
+                <td align="right">49.8693</td>
+                <td align="right">31.17</td>
+                <td align="right">5.44</td>
+                </tr>
+                <tr>
+                <td align="right">5960603</td>
+                <td>Geraldton</td>
+                <td>92.00%</td>
+                <td>Ca</td>
+                <td>69.00%</td>
+                <td align="right">49.7189</td>
+                <td align="right">31.98</td>
+                <td align="right">8.12</td>
+                </tr>
+                <tr>
+                <td align="right">1797543</td>
+                <td>Tianpeng</td>
+                <td>48.00%</td>
+                <td>Cn</td>
+                <td>92.00%</td>
+                <td align="right">28.8838</td>
+                <td align="right">63.3</td>
+                <td align="right">8.23</td>
+                </tr>
+                <tr>
+                <td align="right">4013704</td>
+                <td>Laguna</td>
+                <td>92.00%</td>
+                <td>Mx</td>
+                <td>31.00%</td>
+                <td align="right">27.5185</td>
+                <td align="right">78.71</td>
+                <td align="right">4.09</td>
+                </tr>
+                <tr>
+                <td align="right">2014369</td>
+                <td>Ulety</td>
+                <td>92.00%</td>
+                <td>Ru</td>
+                <td>90.00%</td>
+                <td align="right">51.3572</td>
+                <td align="right">36.03</td>
+                <td align="right">15.84</td>
+                </tr>
+                </tbody></table>              
+        </div>
+                    
+        <br></br>
+        <hr></hr>
+        <br></br>
+    </div>    
+</body>

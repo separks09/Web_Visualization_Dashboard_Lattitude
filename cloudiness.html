@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name = "description" content>
     <meta name="author" content>
-    <title>Latitude vs Humidity</title>
+    <title>Latitude vs Cloudiness</title>
     <!-- Bootstrap core CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous" rel = "stylesheet">
     <!-- Custom styles -->
@@ -36,23 +36,23 @@
     </div>
     <div class = "container-fluid p-3">
     <div class="container bg-white m-5 p-5">
-        <h3> Summary: Latitude vs. Humidity </h3>
+        <h3> Summary: Latitude vs. Cloudiness </h3>
         <br></br>
         <hr></hr>
         <p >The purpose of this project was to analyze how weather changes as you get closer to the 
             equator.  To accomplish this analysis, we first use CitiPy to randomly generate a list of over 500 unique cities.
             We then called on the OpenWeatherMap API to assemble a dataset from the current readings in each city.</p>
-        <p>After assembling the dataset, we user Matplotlib to plot various aspects of the weather.  Humidity trends match 
-            anticipated behavior as latitudes approach the equator: high humidity at the equator (rainforest climates), a 
-            noticeable decrease in humidity around the 20 to 40-degree latitudes (desert climates), and a mix of humidity 
-            values moving throughout the temperate climates.</p>
+        <p>After assembling the dataset, we user Matplotlib to plot various aspects of the weather.  We expected cloud cover 
+            to increase as latitudes approached the equator, but this was not supported by the plot of "cloudiness" values. 
+            Our data set likely trends towards coastal regions of lower altitudes (see <a href = 
+            "https://github.com/separks09/APIs/blob/master/WeatherPy/README_WhyCitiPy.md" style = "color:#5BC0DE">
+            WhyCitiPy</a>
+            for full explaination), and that this may have impacted any trends in cloud cover we anticipated.</p>
         <hr></hr>
         <br></br>
-        <img src="output_21_1.png" alt="Plot of Latitude vs. Humidity" height="481" width="691">
+        <img src="output_19_1.png" alt="Plot of Latitude vs. Cloudiness" height="481" width="691">
         <br></br>
         <hr></hr>
         <br></br>
     </div>
 </body>
-    
-    
